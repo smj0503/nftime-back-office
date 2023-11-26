@@ -1,0 +1,30 @@
+.button
+{
+    display: flex;
+    height: 56px;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+    background-color: #00B6F0;
+}
+
+.button[data-fill=true]
+{
+    width: 100%;
+}
+
+.button[disabled]
+{
+    background: rgba(0, 158, 208, 0.24);
+}
+
+.title
+{
+    color: #FFFFFF;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+}
