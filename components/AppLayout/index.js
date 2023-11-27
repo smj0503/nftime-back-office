@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import MenuButton from "@/components/MenuButton";
 
 import styles from "./AppLayout.module.css";
@@ -19,7 +21,7 @@ export default function ({ category, menu, children })
         <div className={ styles.backgroundContainer }>
             <div className={ styles.sidebar }>
                 <div className={ styles.menus }>
-                    <Logo/>
+                    <Link href="/"><Logo/></Link>
                     <div className={ styles.category }>
                         <div className={ styles.title }><span>{ "Register" }</span></div>
                         <MenuButton href="/register/company" icon={ <IconCompany/> } leftPadding={true}>{ "Company" }</MenuButton>
