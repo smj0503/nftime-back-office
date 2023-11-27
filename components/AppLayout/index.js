@@ -16,7 +16,7 @@ import IconAlarm from "../../public/assets/icon-alarm-28.svg";
 export default function ({ category, menu, children })
 {
     return (
-        <>
+        <div className={ styles.backgroundContainer }>
             <div className={ styles.sidebar }>
                 <div className={ styles.menus }>
                     <Logo/>
@@ -53,6 +53,6 @@ export default function ({ category, menu, children })
             <main className={ styles.body }>
                 { children }
             </main>
-        </>
+        </div>
     )
 }

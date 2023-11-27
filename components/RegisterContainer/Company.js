@@ -1,4 +1,4 @@
-import styles from "./CompanyRegisterContainer.module.css";
+import styles from "./RegisterContainer.module.css";
 
 export default function ({ setName, setDescription, setUrl })
 {
