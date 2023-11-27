@@ -15,7 +15,6 @@ export default function ({ children })
         reader.onload = (event) =>
         {
             const data = event.target.result;
-            console.log(data);
             setPhoto(data);
         };
 

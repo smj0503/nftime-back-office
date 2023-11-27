@@ -20,15 +20,15 @@ export default function ({ setName, setDescription, setUrl })
     return (
         <div className={ styles.container }>
             <div className={ styles.item }>
-                <span className={ styles.title }>{ "Company name" }</span>
+                <label className={ styles.label }>{ "Company name" }</label>
                 <input type="text" className={ styles.input } onChange={ onChangeName }/>
             </div>
             <div className={ styles.item }>
-                <span className={ styles.title }>{ "Company Description" }</span>
+                <label className={ styles.label }>{ "Company Description" }</label>
                 <input type="text" className={ styles.input } data-long={true} onChange={ onChangeDescription }/>
             </div>
             <div className={ styles.item }>
-                <span className={ styles.title }>{ "Company Website" }</span>
+                <label className={ styles.label }>{ "Company Website" }</label>
                 <input type="text" className={ styles.input } onChange={ onChangeUrl }/>
             </div>
         </div>
