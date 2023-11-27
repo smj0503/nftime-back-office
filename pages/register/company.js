@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import AppLayout from "@/components/AppLayout";
 import ImageUploader from "@/components/ImageUploader";
@@ -14,24 +14,26 @@ export default function ()
     const [description, setDescription] = useState('');
     const [url, setUrl] = useState('');
 
-    // console.log('image : ', image);
-    // console.log('name : ', name);
-    // console.log('description : ', description);
-    // console.log('url : ', url);
+    const [isActive, setIsActive] = useState(false);
+
+    useEffect(() =>
+    {
+        setIsActive(!!image && !!name && !!description && !!url);
+    }, [image, name, description, url]);
 
     return (
         <AppLayout category="Register" menu="Company" >
             <div className={ styles.container }>
                 <span className={ styles.title }>{ "Register Company" }</span>
 
-                <div className={ styles.submitContainer }>
+                <form className={ styles.formContainer }>
                     <div className={ styles.inputContainer }>
-                        <ImageUploader>{ "Company Image" }</ImageUploader>
+                        <ImageUploader setImage={ setImage }>{ "Company Image" }</ImageUploader>
                         <CompanyRegisterContainer setName={ setName } setDescription={ setDescription } setUrl={ setUrl }/>
                     </div>
+                    <ActionButton type="submit" width={185} disabled={ !isActive }>{ "Register" }</ActionButton>
+                </form>
 
-                    <ActionButton type="submit" width={185} disabled={true}>{ "Register" }</ActionButton>
-                </div>
             </div>
         </AppLayout>
     )

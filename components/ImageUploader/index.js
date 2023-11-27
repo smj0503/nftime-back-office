@@ -3,10 +3,10 @@ import { useRef, useState } from "react";
 import styles from "./ImageUploader.module.css";
 import IconPhoto from "../../public/assets/icon-photo.svg";
 
-export default function ({ children })
+export default function ({ children, setImage })
 {
     const imageSelector = useRef();
-    const [photo, setPhoto] = useState();
+    const [photo, setPhoto] = useState('');
 
     const _onChange = (e) =>
     {
@@ -16,6 +16,7 @@ export default function ({ children })
         {
             const data = event.target.result;
             setPhoto(data);
+            setImage(data);
         };
 
         reader.readAsDataURL(e.target.files[0]);
