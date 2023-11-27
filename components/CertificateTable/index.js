@@ -1,4 +1,4 @@
-import CompanyItem from "@/components/CompanyItem";
+import CertificateItem from "@/components/CertificateItem";
 
 import styles from "./CertificateTable.module.css";
 
@@ -23,11 +23,11 @@ export default function ()
                     <label>{ "Date" }</label>
                 </div>
             </div>
-            <CompanyItem/>
-            <CompanyItem/>
-            <CompanyItem/>
-            <CompanyItem/>
-            <CompanyItem/>
+            <CertificateItem/>
+            <CertificateItem/>
+            <CertificateItem/>
+            <CertificateItem/>
+            <CertificateItem/>
         </div>
     )
 }

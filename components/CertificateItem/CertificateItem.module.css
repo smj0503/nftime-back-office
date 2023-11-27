@@ -1,0 +1,51 @@
+.item
+{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    border-bottom: 1px solid rgba(28, 28, 28, 0.05);
+}
+
+.item > div
+{
+    display: flex;
+    align-items: center;
+
+    padding: 16px 20px;
+    height: 84px;
+}
+
+.item span
+{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.info
+{
+    gap: 12px;
+
+    width: 336px;
+}
+
+.text
+{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.description
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: rgba(28, 28, 28, 0.40);
+}
+
+.data
+{
+    width: 160px;
+}

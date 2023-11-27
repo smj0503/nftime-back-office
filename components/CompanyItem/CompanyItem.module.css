@@ -11,6 +11,9 @@
 
 .item > div
 {
+    display: flex;
+    align-items: center;
+
     padding: 16px 20px;
     height: 100%;
 }
@@ -24,8 +27,6 @@
 
 .info
 {
-    display: flex;
-    align-items: center;
     gap: 12px;
 
     width: 456px;
