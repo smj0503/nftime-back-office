@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import styles from "./ImageUploader.module.css";
 import IconPhoto from "../../public/assets/icon-photo.svg";
@@ -6,6 +6,7 @@ import IconPhoto from "../../public/assets/icon-photo.svg";
 export default function ({ children })
 {
     const imageSelector = useRef();
+    const [photo, setPhoto] = useState();
 
     const _onChange = (e) =>
     {
@@ -14,11 +15,11 @@ export default function ({ children })
         reader.onload = (event) =>
         {
             const data = event.target.result;
-            console.log('data : ', data);
+            console.log(data);
+            setPhoto(data);
         };
 
         reader.readAsDataURL(e.target.files[0]);
-        // console.log('file : ', reader.readAsDataURL(e.target.files[0]));
     };
 
     const _onClick = () =>
@@ -35,9 +36,15 @@ export default function ({ children })
 
             <div className={ styles.selector }>
                 <input type="file" className={ styles.file } ref={ imageSelector } onChange={ _onChange }/>
-                <button type="button" className={ styles.uploadButton } onClick={ _onClick }>
-                    <IconPhoto/>
-                </button>
+                {
+                    photo ? (
+                        <img src={ photo } alt="test" className={ styles.img }/>
+                    ) : (
+                        <button type="button" className={ styles.uploadButton } onClick={ _onClick }>
+                            <IconPhoto/>
+                        </button>
+                    )
+                }
             </div>
         </div>
     )
