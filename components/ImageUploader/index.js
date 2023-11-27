@@ -1,11 +1,16 @@
 import { useRef } from "react";
 
 import styles from "./ImageUploader.module.css";
-import IconImageSelector from "../../public/assets/icon-image-selector.svg";
+import IconPhoto from "../../public/assets/icon-photo.svg";
 
 export default function ({ children })
 {
     const imageSelector = useRef();
+
+    const _onChange = (e) =>
+    {
+        console.log('file : ', e.target.files[0]);
+    };
 
     const _onClick = () =>
     {
@@ -20,9 +25,9 @@ export default function ({ children })
             </div>
 
             <div className={ styles.selector }>
-                <input type="file" className={ styles.file } ref={ imageSelector }/>
+                <input type="file" className={ styles.file } ref={ imageSelector } onChange={ _onChange }/>
                 <button type="button" className={ styles.uploadButton } onClick={ _onClick }>
-                    <IconImageSelector/>
+                    <IconPhoto/>
                 </button>
             </div>
         </div>

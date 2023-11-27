@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import AppLayout from "@/components/AppLayout";
 import ImageUploader from "@/components/ImageUploader";
 import CompanyRegisterContainer from "@/components/RegisterContainer/Company";
@@ -19,7 +21,6 @@ export default function ()
                     </div>
                     <div className={ styles.submitButton }><ActionButton>{ "Register" }</ActionButton></div>
                 </div>
-
             </div>
         </AppLayout>
     )
