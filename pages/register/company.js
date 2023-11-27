@@ -9,6 +9,8 @@ import styles from "../../styles/Homepage.module.css";
 
 export default function ()
 {
+    const [image, setImage] = useState('');
+
     return (
         <AppLayout category="Register" menu="Company" >
             <div className={ styles.container }>

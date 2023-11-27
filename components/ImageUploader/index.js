@@ -9,7 +9,16 @@ export default function ({ children })
 
     const _onChange = (e) =>
     {
-        console.log('file : ', e.target.files[0]);
+        const reader = new FileReader();
+
+        reader.onload = (event) =>
+        {
+            const data = event.target.result;
+            console.log('data : ', data);
+        };
+
+        reader.readAsDataURL(e.target.files[0]);
+        // console.log('file : ', reader.readAsDataURL(e.target.files[0]));
     };
 
     const _onClick = () =>
