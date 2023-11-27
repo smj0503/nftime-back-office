@@ -23,9 +23,9 @@ export default function ({ setName, setDescription, setUrl })
                 <label className={ styles.label }>{ "Company name" }</label>
                 <input type="text" className={ styles.input } onChange={ onChangeName }/>
             </div>
-            <div className={ styles.item }>
+            <div className={ styles.item } data-long={true}>
                 <label className={ styles.label }>{ "Company Description" }</label>
-                <input type="text" className={ styles.input } data-long={true} onChange={ onChangeDescription }/>
+                <textarea className={ styles.input } onChange={ onChangeDescription } data-long={true}/>
             </div>
             <div className={ styles.item }>
                 <label className={ styles.label }>{ "Company Website" }</label>

@@ -21,6 +21,11 @@ export default function ()
         setIsActive(!!image && !!name && !!description && !!url);
     }, [image, name, description, url]);
 
+    const onSubmit = () =>
+    {
+
+    }
+
     return (
         <AppLayout category="Register" menu="Company" >
             <div className={ styles.container }>

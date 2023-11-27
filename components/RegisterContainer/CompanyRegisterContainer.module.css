@@ -38,9 +38,12 @@
 
     border-radius: 12px;
     background-color: #FFFFFF;
+
+    outline: 0;
+    border: 0;
 }
 
-.input[data-long=true]
+.input[data-long]
 {
     height: 140px;
 }
