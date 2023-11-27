@@ -1,7 +1,7 @@
 import AppLayout from "@/components/AppLayout";
 import StatusBox from "@/components/StatusBox";
 
-import styles from "../../styles/Homepage.module.css";
+import styles from "../../styles/Dashboards.module.css";
 import IconCompany from "../../public/assets/icon-company-28.svg";
 import IconCertificate from "../../public/assets/icon-certifiacte-28.svg";
 import IconIssue from "../../public/assets/icon-issue-28.svg";

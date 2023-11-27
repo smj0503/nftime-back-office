@@ -7,7 +7,7 @@ import ImageUploader from "@/components/ImageUploader";
 import CompanyRegisterContainer from "@/components/RegisterContainer/Company";
 import ActionButton from "@/components/ActionButton";
 
-import styles from "../../styles/Homepage.module.css";
+import styles from "../../styles/Register.module.css";
 
 export default function ()
 {

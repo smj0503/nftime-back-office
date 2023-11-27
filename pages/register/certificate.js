@@ -5,7 +5,7 @@ import ImageUploader from "@/components/ImageUploader";
 import CertificateRegisterContainer from "@/components/RegisterContainer/Certificate";
 import ActionButton from "@/components/ActionButton";
 
-import styles from "../../styles/Homepage.module.css";
+import styles from "../../styles/Register.module.css";
 
 export default function ()
 {
