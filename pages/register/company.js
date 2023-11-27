@@ -14,6 +14,11 @@ export default function ()
     const [description, setDescription] = useState('');
     const [url, setUrl] = useState('');
 
+    console.log('image : ', image);
+    console.log('name : ', name);
+    console.log('description : ', description);
+    console.log('url : ', url);
+
     return (
         <AppLayout category="Register" menu="Company" >
             <div className={ styles.container }>
@@ -22,10 +27,10 @@ export default function ()
                 <div className={ styles.submitContainer }>
                     <div className={ styles.inputContainer }>
                         <ImageUploader>{ "Company Image" }</ImageUploader>
-                        <CompanyRegisterContainer/>
+                        <CompanyRegisterContainer setName={ setName } setDescription={ setDescription } setUrl={ setUrl }/>
                     </div>
 
-                    {/*<div className={ styles.submitButton }><ActionButton>{ "Register" }</ActionButton></div>*/}
+                    <div className={ styles.submitButton }><ActionButton width={185}>{ "Register" }</ActionButton></div>
                 </div>
             </div>
         </AppLayout>

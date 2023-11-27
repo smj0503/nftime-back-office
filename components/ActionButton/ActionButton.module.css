@@ -1,18 +1,14 @@
 .button
 {
     display: flex;
-    height: 56px;
-    padding: 16px 20px;
     justify-content: center;
     align-items: center;
 
+    height: 56px;
+    padding: 16px 20px;
+
     border-radius: 12px;
     background-color: #00B6F0;
-}
-
-.button[data-fill=true]
-{
-    width: 100%;
 }
 
 .button[disabled]

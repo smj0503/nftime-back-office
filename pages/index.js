@@ -19,7 +19,7 @@ export default function ()
                         <input placeholder="ID"/>
                         <input placeholder="Password"/>
                     </div>
-                    <ActionButton fill={true}>{ "Login" }</ActionButton>
+                    <ActionButton width={322}>{ "Login" }</ActionButton>
                 </div>
             </div>
         </div>
