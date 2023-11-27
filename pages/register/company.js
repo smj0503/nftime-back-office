@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { registerCompany } from "@/apis/register";
 
@@ -15,13 +15,6 @@ export default function ()
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [url, setUrl] = useState('');
-
-    const [isActive, setIsActive] = useState(false);
-
-    useEffect(() =>
-    {
-        setIsActive(!!image && !!name && !!description && !!url);
-    }, [image, name, description, url]);
 
     const onSubmit = async () =>
     {
@@ -40,7 +33,7 @@ export default function ()
                         <ImageUploader setImage={ setImage }>{ "Company Image" }</ImageUploader>
                         <CompanyRegisterContainer setName={ setName } setDescription={ setDescription } setUrl={ setUrl }/>
                     </div>
-                    <ActionButton width={185} disabled={ !isActive } onClick={ onSubmit }>{ "Register" }</ActionButton>
+                    <ActionButton width={185} disabled={ !(!!image && !!name && !!description && !!url) } onClick={ onSubmit }>{ "Register" }</ActionButton>
                 </div>
 
             </div>
