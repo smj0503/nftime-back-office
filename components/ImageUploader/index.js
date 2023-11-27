@@ -19,6 +19,8 @@ export default function ({ children, setImage })
             setImage(data);
         };
 
+        // setImage(e.target.files[0]);
+
         reader.readAsDataURL(e.target.files[0]);
     };
 

@@ -21,7 +21,7 @@ export default function ({ setName, setDescription, setUrl })
         <div className={ styles.container }>
             <div className={ styles.item }>
                 <label className={ styles.label }>{ "Company name" }</label>
-                <input type="text" className={ styles.input } onChange={ onChangeName }/>
+                <textarea className={ styles.input } onChange={ onChangeName }/>
             </div>
             <div className={ styles.item } data-long={true}>
                 <label className={ styles.label }>{ "Company Description" }</label>
@@ -29,7 +29,7 @@ export default function ({ setName, setDescription, setUrl })
             </div>
             <div className={ styles.item }>
                 <label className={ styles.label }>{ "Company Website" }</label>
-                <input type="text" className={ styles.input } onChange={ onChangeUrl }/>
+                <textarea className={ styles.input } onChange={ onChangeUrl }/>
             </div>
         </div>
     )
