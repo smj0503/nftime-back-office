@@ -1,6 +1,6 @@
 import CompanyItem from "@/components/CompanyItem";
 
-import styles from "./CompanyTable.module.css";
+import styles from "./CertificateTable.module.css";
 
 export default function ()
 {
@@ -8,10 +8,13 @@ export default function ()
         <div className={ styles.table }>
             <div className={ styles.columns }>
                 <div className={ styles.name }>
+                    <label>{ "Certificate" }</label>
+                </div>
+                <div className={ styles.data }>
                     <label>{ "Company" }</label>
                 </div>
                 <div className={ styles.data }>
-                    <label>{ "Certificate" }</label>
+                    <label>{ "Category" }</label>
                 </div>
                 <div className={ styles.data }>
                     <label>{ "Issue" }</label>
