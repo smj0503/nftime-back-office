@@ -3,7 +3,7 @@ import { useState } from "react";
 import AppLayout from "@/components/AppLayout";
 import ImageUploader from "@/components/ImageUploader";
 import ActionButton from "@/components/ActionButton";
-import IssueContainer from "components/IssueContainer";
+import IssueContainer from "components/IssueContainer/InputContainer";
 
 import styles from "../../styles/Register.module.css";
 
