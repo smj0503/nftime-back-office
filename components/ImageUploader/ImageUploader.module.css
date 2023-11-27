@@ -12,7 +12,7 @@
     background-color: rgba(33, 110, 134, 0.04);
 }
 
-.description
+.header
 {
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
     padding-bottom: 24px;
 }
 
-.title
+.label
 {
     font-size: 14px;
     font-weight: 400;
@@ -30,7 +30,7 @@
     padding: 4px 8px;
 }
 
-.subTitle
+.description
 {
     color: rgba(28, 28, 28, 0.60);
 
@@ -53,4 +53,21 @@
 
     border-radius: 16px;
     background-color: #FFFFFF;
+}
+
+.file
+{
+    display: none;
+}
+
+.uploadButton
+{
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+
+    /*width: 100%;*/
+    /*height: 100%;*/
+
+    /*z-index: 10;*/
 }

@@ -14,7 +14,7 @@ export default function ()
 
                 <div className={ styles.submitContainer }>
                     <div className={ styles.inputContainer }>
-                        <ImageUploader></ImageUploader>
+                        <ImageUploader>{ "Company Image" }</ImageUploader>
                         <CompanyRegisterContainer/>
                     </div>
                     <div className={ styles.submitButton }><ActionButton>{ "Register" }</ActionButton></div>

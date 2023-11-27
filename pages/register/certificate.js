@@ -9,7 +9,7 @@ export default function ()
         <AppLayout category="Register" menu="Certificate" >
             <div className={ styles.container }>
                 <span className={ styles.title }>{ "Register Certificate" }</span>
-                <ImageUploader></ImageUploader>
+                <ImageUploader>{ "Certificate Image" }</ImageUploader>
             </div>
         </AppLayout>
     )
