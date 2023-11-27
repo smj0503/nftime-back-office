@@ -1,5 +1,9 @@
+import { useState } from "react";
+
 import AppLayout from "@/components/AppLayout";
 import ImageUploader from "@/components/ImageUploader";
+import ActionButton from "@/components/ActionButton";
+import IssueContainer from "components/IssueContainer";
 
 import styles from "../../styles/Register.module.css";
 
@@ -9,7 +13,14 @@ export default function ()
         <AppLayout category="Issue" menu="Certificate" >
             <div className={ styles.container }>
                 <span className={ styles.title }>{ "Issue Digital Certificate" }</span>
-                <ImageUploader></ImageUploader>
+
+                <div className={ styles.formContainer }>
+                    <div className={ styles.inputContainer }>
+                        <ImageUploader></ImageUploader>
+                        <IssueContainer/>
+                    </div>
+                    <ActionButton width={185}>{ "Issue" }</ActionButton>
+                </div>
             </div>
         </AppLayout>
     )
