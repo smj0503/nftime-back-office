@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-import { registerCompany } from "@/apis/register";
+// import { registerCompany } from "@/apis/register";
 
 import AppLayout from "@/components/AppLayout";
 import ImageUploader from "@/components/ImageUploader";
 import CompanyRegisterContainer from "@/components/RegisterContainer/Company";
 import ActionButton from "@/components/ActionButton";
+import Toast from "@/components/Toast";
 
 import styles from "../../styles/Register.module.css";
 
@@ -18,9 +19,9 @@ export default function ()
 
     const onSubmit = async () =>
     {
-        const result = await registerCompany(image, name, description, url);
+        // const result = await registerCompany(image, name, description, url);
 
-        console.log('result : ', result);
+        // console.log('result : ', result);
     }
 
     return (
@@ -35,7 +36,7 @@ export default function ()
                     </div>
                     <ActionButton width={185} disabled={ !(!!image && !!name && !!description && !!url) } onClick={ onSubmit }>{ "Register" }</ActionButton>
                 </div>
-
+                {/*<Toast/>*/}
             </div>
         </AppLayout>
     )

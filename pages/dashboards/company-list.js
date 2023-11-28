@@ -30,7 +30,6 @@ export default function ()
                     <StatusBox icon={ <IconCertificate/> } count={20} color={ "rgba(48, 255, 205, 0.10)" }>{ "Registered Certificate" }</StatusBox>
                     <StatusBox icon={ <IconIssue/> } count={15} color={ "rgba(42, 208, 0, 0.10)" }>{ "Issued Certificate" }</StatusBox>
                 </div>
-
                 <CompanyTable/>
             </div>
         </AppLayout>

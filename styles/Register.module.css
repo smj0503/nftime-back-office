@@ -5,6 +5,8 @@
     gap: 44px;
 
     padding: 36px 32px;
+
+    position: relative;
 }
 
 .title
