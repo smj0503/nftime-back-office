@@ -1,3 +1,8 @@
+import { useEffect } from "react";
+import { asyncEffect } from "@/common/utils";
+
+import { getStatistics } from "@/apis/dashboard.api";
+
 import AppLayout from "@/components/AppLayout";
 import StatusBox from "@/components/StatusBox";
 import CompanyTable from "@/components/CompanyTable";
@@ -9,6 +14,13 @@ import IconIssue from "../../public/assets/icon-issue-28.svg";
 
 export default function ()
 {
+    asyncEffect(async () =>
+    {
+        const { statistics } = await getStatistics();
+
+        console.log('result : ', statistics);
+    });
+
     return (
         <AppLayout category="Dashboards" menu="Company list" >
             <div className={ styles.container }>
