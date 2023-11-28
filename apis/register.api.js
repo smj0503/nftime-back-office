@@ -1,14 +1,10 @@
 import axios from 'axios';
 
-const apiRoot = axios.create({
-    baseURL: 'https://3.39.120.32:9200',
-});
-
 export const registerCompany = async (image, name, description, url) =>
 {
     try
     {
-        const { data } = await apiRoot.post('/back-office/company/register', {
+        const { data } = await axios.post('https://3.39.120.32:9200/back-office/company/register', {
             companyImage: image,
             companyName: name,
             companyDescription: description,
