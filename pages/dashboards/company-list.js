@@ -14,12 +14,12 @@ import IconIssue from "../../public/assets/icon-issue-28.svg";
 
 export default function ()
 {
-    asyncEffect(async () =>
-    {
-        const { statistics } = await getStatistics();
-
-        console.log('result : ', statistics);
-    });
+    // asyncEffect(async () =>
+    // {
+    //     const { statistics } = await getStatistics();
+    //
+    //     console.log('result : ', statistics);
+    // });
 
     return (
         <AppLayout category="Dashboards" menu="Company list" >
