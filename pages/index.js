@@ -3,7 +3,7 @@ import { useState } from "react";
 import ActionButton from "@/components/ActionButton";
 
 import styles from "../styles/Login.module.css";
-import Logo from "/public/assets/logo/logo-login.svg";
+import Logo from "/public/assets/logo/logo-signin.svg";
 
 export default function ()
 {

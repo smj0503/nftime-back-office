@@ -4,7 +4,7 @@ import MenuButton from "@/components/MenuButton";
 
 import styles from "./AppLayout.module.css";
 
-import Logo from "../../public/assets/logo/logo-homepage.svg";
+import Logo from "../../public/assets/logo/logo-layout.svg";
 
 import IconCompany from "../../public/assets/icon-company-20.svg";
 import IconCertificate from "../../public/assets/icon-certificate-20.svg";
