@@ -50,10 +50,10 @@ export default function ()
                     </div>
                     <ActionButton width={185} disabled={ !(!!image && !!name && !!description && !!url) } onClick={ onSubmit }>{ "Register" }</ActionButton>
                 </div>
-                {
-                    isOpened && <Toast state="fail" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick }/>
-                }
             </div>
+            {
+                isOpened && <Toast state="fail" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick }/>
+            }
         </AppLayout>
     )
 }

@@ -13,7 +13,9 @@
     box-shadow: 0 6px 24px 0 rgba(28, 28, 28, 0.04);
 
     position: absolute;
-    bottom: 72px;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .notion

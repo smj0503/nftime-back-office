@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 import AppLayout from "@/components/AppLayout";
@@ -9,6 +10,13 @@ import styles from "../../styles/Register.module.css";
 
 export default function ()
 {
+    const router = useRouter();
+
+    const onClick = async () =>
+    {
+        await router.push('/dashboards/certificate-list');
+    };
+
     return (
         <AppLayout category="Issue" menu="Certificate" >
             <div className={ styles.container }>

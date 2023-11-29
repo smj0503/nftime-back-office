@@ -22,7 +22,12 @@ export default function ({ setName, setDescription, setUrl })
             <div className={ styles.pair }>
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "Choose Company" }</label>
-                    <input className={ styles.input } onChange={ onChangeName }/>
+                    <select className={ styles.input } onChange={ onChangeName }>
+                        <option>{ "Diploma" }</option>
+                        <option>{ "Contest" }</option>
+                        <option>{ "License" }</option>
+                        <option>{ "Others" }</option>
+                    </select>
                 </div>
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "Certificate Category" }</label>
@@ -32,7 +37,7 @@ export default function ({ setName, setDescription, setUrl })
 
             <div className={ styles.pair }>
                 <div className={ styles.item }>
-                    <label className={ styles.label }>{ "Starts date" }</label>
+                    <label className={ styles.label }>{ "Start date" }</label>
                     <input type="date" className={ styles.input } onChange={ onChangeName }/>
                 </div>
                 <div className={ styles.item }>
@@ -45,13 +50,13 @@ export default function ({ setName, setDescription, setUrl })
                 <label className={ styles.label }>{ "Certificate name" }</label>
                 <textarea className={ styles.input } onChange={ onChangeName }/>
             </div>
-            <div className={ styles.item } data-long={true}>
-                <label className={ styles.label }>{ "Certificate Description" }</label>
-                <textarea className={ styles.input } onChange={ onChangeDescription } data-long={true}/>
-            </div>
             <div className={ styles.item }>
                 <label className={ styles.label }>{ "Certificate Website" }</label>
                 <textarea className={ styles.input } onChange={ onChangeUrl }/>
+            </div>
+            <div className={ styles.item } data-long={true}>
+                <label className={ styles.label }>{ "Certificate Description" }</label>
+                <textarea className={ styles.input } onChange={ onChangeDescription } data-long={true}/>
             </div>
         </div>
     )
