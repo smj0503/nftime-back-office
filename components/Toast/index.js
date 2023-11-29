@@ -2,7 +2,7 @@ import styles from "./Toast.module.css";
 import IconCheck from "../../public/assets/icon-check.svg";
 import IconWarning from "../../public/assets/icon-warning.svg";
 
-export default function ({ state, onClick })
+export default function ({ state, onClick, close, message })
 {
     return (
         <div className={ styles.toast }>
@@ -15,7 +15,7 @@ export default function ({ state, onClick })
                         state === "success" ? (
                             <>
                                 <span className={ styles.state }>{ "Success" }</span>
-                                <span className={ styles.confirm }>{ "Are you sure you want to register your certificate?" }</span>
+                                <span className={ styles.confirm }>{ message }</span>
                             </>
                         ) : (
                             <>
@@ -25,8 +25,25 @@ export default function ({ state, onClick })
                         )
                     }
                 </div>
-                <button type="button"></button>
             </div>
+            {
+                state === "success" ? (
+                    <div className={ styles.buttonGroup }>
+                        <button type="button" className={styles.button } data-color="white" onClick={ close }>
+                            <label>{ "Cancel" }</label>
+                        </button>
+                        <button type="button" className={styles.button } onClick={ onClick }>
+                            <label>{ "Yes" }</label>
+                        </button>
+                    </div>
+                ) : (
+                    <div className={ styles.buttonGroup }>
+                        <button type="button" className={styles.button } onClick={ close }>
+                            <label>{ "Retry" }</label>
+                        </button>
+                    </div>
+                )
+            }
         </div>
     )
 }
