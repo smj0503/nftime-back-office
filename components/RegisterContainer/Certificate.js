@@ -38,11 +38,11 @@ export default function ({ setName, setDescription, setUrl })
             <div className={ styles.pair }>
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "Start date" }</label>
-                    <input type="date" className={ styles.input } onChange={ onChangeName }/>
+                    <input type="date" className={ styles.input } onChange={ onChangeName } placeholder="YYYY.MM.DD"/>
                 </div>
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "End date" }</label>
-                    <input type="date" className={ styles.input } onChange={ onChangeName }/>
+                    <input type="date" className={ styles.input } onChange={ onChangeName } placeholder=""/>
                 </div>
             </div>
 
