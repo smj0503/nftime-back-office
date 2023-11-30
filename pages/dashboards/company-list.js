@@ -39,7 +39,7 @@ export default function ()
                         )
                     }
                 </div>
-                {/*<CompanyTable companyList={ companyList }/>*/}
+                <CompanyTable companyList={ companyList }/>
             </div>
         </AppLayout>
     )

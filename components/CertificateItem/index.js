@@ -2,28 +2,28 @@ import RemoteImage from "@/components/RemoteImage";
 
 import styles from "./CertificateItem.module.css";
 
-export default function ()
+export default function ({ image, name, description, companyName, category, issueNum, date })
 {
     return (
         <div className={ styles.item }>
             <div className={ styles.info }>
-                <RemoteImage src="" shape="certificate"/>
+                <RemoteImage src={ image } shape="certificate"/>
                 <div className={ styles.text }>
-                    <span>{ "Certificate name" }</span>
-                    <span className={ styles.description }>{ "Certificate description" }</span>
+                    <span>{ name }</span>
+                    <span className={ styles.description }>{ description }</span>
                 </div>
             </div>
             <div className={ styles.data }>
-                <span>{ "Company name" }</span>
+                <span>{ companyName }</span>
             </div>
             <div className={ styles.data }>
-                <span>{ "Category" }</span>
+                <span>{ category }</span>
             </div>
             <div className={ styles.data }>
-                <span>{ "488" }</span>
+                <span>{ issueNum }</span>
             </div>
             <div className={ styles.data }>
-                <span>{ "Feb 2, 2023" }</span>
+                <span>{ date }</span>
             </div>
         </div>
     )

@@ -22,7 +22,8 @@ export default function ({ companyList })
             </div>
             {
                 companyList.length > 0 && (
-                    companyList.map((company, index) => {
+                    companyList.map((company, index) =>
+                    {
                         return (
                             <CompanyItem
                                 key={ index }
