@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
-// import { registerCompany } from "@/apis/register";
 
 import AppLayout from "@/components/AppLayout";
 import ImageUploader from "@/components/ImageUploader";
@@ -19,12 +18,12 @@ export default function ()
     const [description, setDescription] = useState('');
     const [url, setUrl] = useState('');
 
-    const [isOpened, setIsOpened] = useState(true);
+    const [isOpened, setIsOpened] = useState(false);
 
     const onSubmit = async (e) =>
     {
         e.preventDefault();
-        console.log('submit');
+        setIsOpened(true);
     };
 
     const onClick = async () =>
@@ -51,7 +50,7 @@ export default function ()
                 </div>
             </form>
             {
-                isOpened && <Toast state="fail" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick }/>
+                isOpened && <Toast state="success" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick }/>
             }
         </AppLayout>
     )
