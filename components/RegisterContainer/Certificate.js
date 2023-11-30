@@ -43,7 +43,7 @@ export default function ({ setCompany, setCategory, setStartDate, setEndDate, se
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "Choose Company" }</label>
                     <select className={ styles.input } onChange={ onChangeCompany }>
-                        <option className={ styles.placeholder }>{ "Select Company" }</option>
+                        <option>{ "Select Company" }</option>
                         <option>{ "Protocol Camp" }</option>
                         <option>{ "Dreamplus Academy" }</option>
                         <option>{ "Ewha Womans University" }</option>
@@ -53,7 +53,7 @@ export default function ({ setCompany, setCategory, setStartDate, setEndDate, se
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "Certificate Category" }</label>
                     <select className={ styles.input } onChange={ onChangeCategory }>
-                        <option className={ styles.placeholder }>{ "Select Category" }</option>
+                        <option>{ "Select Category" }</option>
                         <option>{ "Diploma" }</option>
                         <option>{ "Contest" }</option>
                         <option>{ "License" }</option>
