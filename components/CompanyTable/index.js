@@ -44,7 +44,7 @@ export default function ()
                 name="Ewha Womans University"
                 description="Korea's first female school and university. Its predecessor is Ewha Hakdang, founded in 1886, the fifth oldest institution of higher education in Korea."
                 certificateNum={1}
-                issueNum={19}
+                issueNum={24}
                 date="2023.11.15"
             />
             <CompanyItem
