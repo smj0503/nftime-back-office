@@ -41,8 +41,13 @@
 
 .description
 {
+    width: 372px;
+    height: 18px;
+
     text-overflow: ellipsis;
     overflow: hidden;
+    white-space: nowrap;
+
     color: rgba(28, 28, 28, 0.40);
 }
 

@@ -9,6 +9,8 @@
     justify-content: center;
 
     flex-shrink: 0;
+
+    border: 1px solid rgba(28, 28, 28, 0.05);
 }
 
 .img
