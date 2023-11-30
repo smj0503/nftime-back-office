@@ -28,7 +28,7 @@ export default function ()
                 name="Protocol Camp"
                 description="Protocol Camp is a program that develops real-world products related to blockchain. Anyone who is dreaming of a career in the blockchain ecosystem can apply. Be a member of the Web3.0 ecosystem community created by Protocol Camp to discover personal growth potential and draw a career blueprint in the blockchain industry."
                 certificateNum={1}
-                issueNum={20}
+                issueNum={1}
                 date="2023.11.20"
             />
             <CompanyItem

@@ -29,7 +29,7 @@ export default function ()
                 description="Congratulations on the completion of the blockchain boot camp protocol camp with Dream Plus and Hashed."
                 companyName="Protocol Camp"
                 category="Diploma"
-                issueNum={20}
+                issueNum={1}
                 date="2023.11.20"
             />
             <CertificateItem
