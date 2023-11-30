@@ -8,8 +8,7 @@ export const getStatistics = async () =>
     }
     catch (error)
     {
-        console.log('error : ', error);
-        return error;
+        throw error;
     }
 };
 
@@ -21,8 +20,7 @@ export const getCompanyList = async () =>
     }
     catch (error)
     {
-        console.log('error : ', error);
-        return error;
+        throw error;
     }
 };
 
@@ -34,7 +32,6 @@ export const getCertificateList = async () =>
     }
     catch (error)
     {
-        console.log('error : ', error);
-        return error;
+        throw error;
     }
 };

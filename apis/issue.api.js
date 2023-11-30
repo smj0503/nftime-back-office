@@ -12,7 +12,6 @@ export const issueCertificate = async (certificateName, receiver, address) =>
     }
     catch (error)
     {
-        console.log('error : ', error);
-        return error;
+        throw error;
     }
 }

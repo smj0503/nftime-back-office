@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { asyncEffect } from "@/common/utils";
 
-import { getStatistics, getCompanyList } from "@/apis/dashboard.api";
+import { getStatistics, getCertificateList } from "@/apis/dashboard.api";
 
 import AppLayout from "@/components/AppLayout";
 import StatusBox from "@/components/StatusBox";
