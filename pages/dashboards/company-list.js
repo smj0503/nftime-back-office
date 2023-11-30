@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { asyncEffect } from "@/common/utils";
 
-import { getStatistics } from "@/apis/dashboard.api";
+import { getStatistics, getCompanyList } from "@/apis/dashboard.api";
 
 import AppLayout from "@/components/AppLayout";
 import StatusBox from "@/components/StatusBox";
@@ -13,6 +14,9 @@ import IconIssue from "../../public/assets/icon-issue-28.svg";
 
 export default function ()
 {
+    const [statistics, setStatistics] = useState();
+    const [companyList, setCompanyList] = useState([]);
+
     // asyncEffect(async () =>
     // {
     //     const { statistics } = await getStatistics();
@@ -25,11 +29,17 @@ export default function ()
             <div className={ styles.container }>
                 <span className={ styles.title }>{ "Company list" }</span>
                 <div className={ styles.statusContainer }>
-                    <StatusBox icon={ <IconCompany/> } count={4} color={ "rgba(0, 158, 208, 0.10)" }>{ "Registered Company" }</StatusBox>
-                    <StatusBox icon={ <IconCertificate/> } count={4} color={ "rgba(48, 255, 205, 0.10)" }>{ "Registered Certificate" }</StatusBox>
-                    <StatusBox icon={ <IconIssue/> } count={95} color={ "rgba(42, 208, 0, 0.10)" }>{ "Issued Certificate" }</StatusBox>
+                    {
+                        statistics && (
+                            <>
+                                <StatusBox icon={ <IconCompany/> } count={ statistics.registered_company_cnt } color={ "rgba(0, 158, 208, 0.10)" }>{ "Registered Company" }</StatusBox>
+                                <StatusBox icon={ <IconCertificate/> } count={ statistics.registered_certificate_cnt } color={ "rgba(48, 255, 205, 0.10)" }>{ "Registered Certificate" }</StatusBox>
+                                <StatusBox icon={ <IconIssue/> } count={ statistics.issued_certificate_cnt } color={ "rgba(42, 208, 0, 0.10)" }>{ "Issued Certificate" }</StatusBox>
+                            </>
+                        )
+                    }
                 </div>
-                <CompanyTable/>
+                {/*<CompanyTable companyList={ companyList }/>*/}
             </div>
         </AppLayout>
     )

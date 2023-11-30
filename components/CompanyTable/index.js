@@ -1,11 +1,8 @@
-import { useState } from "react";
-import ReactPaginate from "react-paginate";
-
 import CompanyItem from "@/components/CompanyItem";
 
 import styles from "./CompanyTable.module.css";
 
-export default function ()
+export default function ({ companyList })
 {
     return (
         <div className={ styles.table }>
@@ -23,38 +20,23 @@ export default function ()
                     <label>{ "Date" }</label>
                 </div>
             </div>
-            <CompanyItem
-                image={}
-                name="Protocol Camp"
-                description="Protocol Camp is a program that develops real-world products related to blockchain. Anyone who is dreaming of a career in the blockchain ecosystem can apply. Be a member of the Web3.0 ecosystem community created by Protocol Camp to discover personal growth potential and draw a career blueprint in the blockchain industry."
-                certificateNum={1}
-                issueNum={20}
-                date="2023.11.20"
-            />
-            <CompanyItem
-                image={}
-                name="Dreamplus Academy"
-                description="Dream Plus Academy aims to cultivate top experts in cybersecurity. It is an enterprising community where Dreamer, the organizer, Hanwha Life, and the global cybersecurity expert group, Tiori, work together to build an ecosystem."
-                certificateNum={1}
-                issueNum={19}
-                date="2023.11.15"
-            />
-            <CompanyItem
-                image={}
-                name="Dreamplus Academy"
-                description="Dream Plus Academy aims to cultivate top experts in cybersecurity. It is an enterprising community where Dreamer, the organizer, Hanwha Life, and the global cybersecurity expert group, Tiori, work together to build an ecosystem."
-                certificateNum={1}
-                issueNum={19}
-                date="2023.11.15"
-            />
-            <CompanyItem
-                image={}
-                name="Ewha Womans University"
-                description="Korea's first female school and university. Its predecessor is Ewha Hakdang, founded in 1886, the fifth oldest institution of higher education in Korea."
-                certificateNum={1}
-                issueNum={19}
-                date="2023.11.15"
-            />
+            {
+                companyList.length > 0 && (
+                    companyList.map((company, index) => {
+                        return (
+                            <CompanyItem
+                                key={ index }
+                                image={ company.company_image }
+                                name={ company.company_name }
+                                description={ company.company_description }
+                                certificateNum={ company.certificate_register_count}
+                                issueNum={ company.certificate_issue_count }
+                                date={ company.company_register_date }
+                            />
+                        )
+                    })
+                )
+            }
         </div>
     )
 }
