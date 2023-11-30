@@ -4,10 +4,10 @@ export const issueCertificate = async (certificateName, receiver, address) =>
 {
     try
     {
-        return await axios.post('https://3.39.120.32:9200/certificate/issue', {
-            certificateName: certificateName,
+        return await axios.post('https://3.39.120.32:9200/back-office/certificate/issue', {
+            certificate_name: certificateName,
             name: receiver,
-            walletAddress: address
+            wallet_address: address
         })
     }
     catch (error)
