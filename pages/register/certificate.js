@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 import AppLayout from "@/components/AppLayout";
@@ -10,6 +11,8 @@ import styles from "../../styles/Register.module.css";
 
 export default function ()
 {
+    const router = useRouter();
+
     const [image, setImage] = useState('');
 
     const [company, setCompany] = useState('');
@@ -21,21 +24,23 @@ export default function ()
     const [url, setUrl] = useState('');
     const [description, setDescription] = useState('');
 
-    const [isOpened, setIsOpened] = useState(true);
+    const [isOpened, setIsOpened] = useState(false);
 
     const onSubmit = async (e) =>
     {
-        // e.preventDefault();
-        console.log('submit');
+        e.preventDefault();
+        setIsOpened(true)
     }
+
+    const onClick = async () =>
+    {
+        await router.push('/issue/certificate');
+    };
 
     const onClose = () =>
     {
         setIsOpened(false);
     };
-
-    console.log('startDate : ', startDate);
-    console.log('type : ', typeof startDate);
 
     return (
         <AppLayout category="Register" menu="Certificate" >
@@ -60,7 +65,7 @@ export default function ()
                 </div>
             </form>
             {
-                isOpened && <Toast state="success" message="Your certificate has been registered!" close={ onClose } onClick={ onClose }/>
+                isOpened && <Toast state="success" message="Would you like to issue a certificate as well?" close={ onClose } onClick={ onClick }/>
             }
         </AppLayout>
     )
