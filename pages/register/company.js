@@ -21,11 +21,10 @@ export default function ()
 
     const [isOpened, setIsOpened] = useState(true);
 
-    const onSubmit = async () =>
+    const onSubmit = async (e) =>
     {
-        // const result = await registerCompany(image, name, description, url);
-
-        // console.log('result : ', result);
+        e.preventDefault();
+        console.log('submit');
     };
 
     const onClick = async () =>
@@ -40,7 +39,7 @@ export default function ()
 
     return (
         <AppLayout category="Register" menu="Company" >
-            <div className={ styles.container }>
+            <form className={ styles.container } onSubmit={ onSubmit }>
                 <span className={ styles.title }>{ "Register Company" }</span>
 
                 <div className={ styles.formContainer }>
@@ -48,9 +47,9 @@ export default function ()
                         <ImageUploader setImage={ setImage }>{ "Company Image" }</ImageUploader>
                         <CompanyRegisterContainer setName={ setName } setDescription={ setDescription } setUrl={ setUrl }/>
                     </div>
-                    <ActionButton width={185} disabled={ !(!!image && !!name && !!description && !!url) } onClick={ onSubmit }>{ "Register" }</ActionButton>
+                    <ActionButton type="submit" width={185} disabled={ !(!!image && !!name && !!description && !!url) } onClick={ onSubmit }>{ "Register" }</ActionButton>
                 </div>
-            </div>
+            </form>
             {
                 isOpened && <Toast state="fail" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick }/>
             }

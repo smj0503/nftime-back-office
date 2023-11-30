@@ -23,8 +23,10 @@ export default function ()
 
     const [isOpened, setIsOpened] = useState(true);
 
-    const onSubmit = async () =>
+    const onSubmit = async (e) =>
     {
+        // e.preventDefault();
+        console.log('submit');
     }
 
     const onClose = () =>
@@ -37,7 +39,7 @@ export default function ()
 
     return (
         <AppLayout category="Register" menu="Certificate" >
-            <form className={ styles.container } encType="multipart/form-data">
+            <form className={ styles.container } onSubmit={ onSubmit }>
                 <span className={ styles.title }>{ "Register Certificate" }</span>
 
                 <div className={ styles.formContainer }>
@@ -54,7 +56,7 @@ export default function ()
                             setUrl={ setUrl }
                         />
                     </div>
-                    <ActionButton width={185} disabled={ !(!!image && !!name && !!description && !!url) } onClick={ onSubmit }>{ "Register" }</ActionButton>
+                    <ActionButton type="submit" width={185} disabled={ !(!!image && !!name && !!description && !!url) }>{ "Register" }</ActionButton>
                 </div>
             </form>
             {
