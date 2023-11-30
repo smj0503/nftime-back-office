@@ -38,10 +38,18 @@
     gap: 6px;
 }
 
-.description
+.text > span
 {
+    width: 210px;
+    height: 18px;
+
     text-overflow: ellipsis;
     overflow: hidden;
+    white-space: nowrap;
+}
+
+.description
+{
     color: rgba(28, 28, 28, 0.40);
 }
 
