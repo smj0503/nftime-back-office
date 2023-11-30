@@ -7,24 +7,6 @@ import styles from "./CompanyTable.module.css";
 
 export default function ()
 {
-    const rows = [
-        <CompanyItem/>,
-        <CompanyItem/>,
-        <CompanyItem/>,
-        <CompanyItem/>,
-        <CompanyItem/>,
-        <CompanyItem/>,
-        <CompanyItem/>,
-        <CompanyItem/>,
-        <CompanyItem/>,
-        <CompanyItem/>,
-        <CompanyItem/>,
-        <CompanyItem/>,
-        <CompanyItem/>
-    ];
-
-    const [pageCount, setPageCount] = useState(Math.ceil(rows.length / 5));
-
     return (
         <div className={ styles.table }>
             <div className={ styles.columns }>
@@ -41,7 +23,38 @@ export default function ()
                     <label>{ "Date" }</label>
                 </div>
             </div>
-
+            <CompanyItem
+                image={}
+                name="Protocol Camp"
+                description="Protocol Camp is a program that develops real-world products related to blockchain. Anyone who is dreaming of a career in the blockchain ecosystem can apply. Be a member of the Web3.0 ecosystem community created by Protocol Camp to discover personal growth potential and draw a career blueprint in the blockchain industry."
+                certificateNum={1}
+                issueNum={20}
+                date="2023.11.20"
+            />
+            <CompanyItem
+                image={}
+                name="Dreamplus Academy"
+                description="Dream Plus Academy aims to cultivate top experts in cybersecurity. It is an enterprising community where Dreamer, the organizer, Hanwha Life, and the global cybersecurity expert group, Tiori, work together to build an ecosystem."
+                certificateNum={1}
+                issueNum={19}
+                date="2023.11.15"
+            />
+            <CompanyItem
+                image={}
+                name="Dreamplus Academy"
+                description="Dream Plus Academy aims to cultivate top experts in cybersecurity. It is an enterprising community where Dreamer, the organizer, Hanwha Life, and the global cybersecurity expert group, Tiori, work together to build an ecosystem."
+                certificateNum={1}
+                issueNum={19}
+                date="2023.11.15"
+            />
+            <CompanyItem
+                image={}
+                name="Ewha Womans University"
+                description="Korea's first female school and university. Its predecessor is Ewha Hakdang, founded in 1886, the fifth oldest institution of higher education in Korea."
+                certificateNum={1}
+                issueNum={19}
+                date="2023.11.15"
+            />
         </div>
     )
 }

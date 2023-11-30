@@ -25,9 +25,9 @@ export default function ()
             <div className={ styles.container }>
                 <span className={ styles.title }>{ "Company list" }</span>
                 <div className={ styles.statusContainer }>
-                    <StatusBox icon={ <IconCompany/> } count={12} color={ "rgba(0, 158, 208, 0.10)" }>{ "Registered Company" }</StatusBox>
-                    <StatusBox icon={ <IconCertificate/> } count={20} color={ "rgba(48, 255, 205, 0.10)" }>{ "Registered Certificate" }</StatusBox>
-                    <StatusBox icon={ <IconIssue/> } count={15} color={ "rgba(42, 208, 0, 0.10)" }>{ "Issued Certificate" }</StatusBox>
+                    <StatusBox icon={ <IconCompany/> } count={4} color={ "rgba(0, 158, 208, 0.10)" }>{ "Registered Company" }</StatusBox>
+                    <StatusBox icon={ <IconCertificate/> } count={4} color={ "rgba(48, 255, 205, 0.10)" }>{ "Registered Certificate" }</StatusBox>
+                    <StatusBox icon={ <IconIssue/> } count={95} color={ "rgba(42, 208, 0, 0.10)" }>{ "Issued Certificate" }</StatusBox>
                 </div>
                 <CompanyTable/>
             </div>
