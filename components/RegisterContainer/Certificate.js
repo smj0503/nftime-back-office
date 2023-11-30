@@ -1,7 +1,27 @@
 import styles from "./RegisterContainer.module.css";
 
-export default function ({ setName, setDescription, setUrl })
+export default function ({ setCompany, setCategory, setStartDate, setEndDate, setName, setDescription, setUrl })
 {
+    const onChangeCompany = (e) =>
+    {
+        setCompany(e.target.value);
+    };
+
+    const onChangeCategory = (e) =>
+    {
+        setCategory(e.target.value);
+    };
+
+    const onChangeStartDate = (e) =>
+    {
+        setStartDate(e.target.value);
+    };
+
+    const onChangeEndDate = (e) =>
+    {
+        setEndDate(e.target.value);
+    };
+
     const onChangeName = (e) =>
     {
         setName(e.target.value);
@@ -31,18 +51,18 @@ export default function ({ setName, setDescription, setUrl })
                 </div>
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "Certificate Category" }</label>
-                    <input className={ styles.input } onChange={ onChangeName }/>
+                    <input className={ styles.input } onChange={ onChangeCategory }/>
                 </div>
             </div>
 
             <div className={ styles.pair }>
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "Start date" }</label>
-                    <input type="date" className={ styles.input } onChange={ onChangeName } placeholder="YYYY.MM.DD"/>
+                    <input type="date" className={ styles.input } onChange={ onChangeStartDate } placeholder="YYYY.MM.DD"/>
                 </div>
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "End date" }</label>
-                    <input type="date" className={ styles.input } onChange={ onChangeName } placeholder=""/>
+                    <input type="date" className={ styles.input } onChange={ onChangeEndDate } placeholder=""/>
                 </div>
             </div>
 
