@@ -10,6 +10,7 @@ import styles from "../../styles/Register.module.css";
 
 export default function ()
 {
+    /* Local Fields */
     const [image, setImage] = useState('');
 
     const [company, setCompany] = useState('');
@@ -23,19 +24,25 @@ export default function ()
 
     const [isOpened, setIsOpened] = useState(true);
 
+    /* User Actions */
     const onSubmit = async (e) =>
     {
-        // e.preventDefault();
-        console.log('submit');
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('certificate_image', image);
+        formData.append('company_name', company);
+        formData.append('certificate_category', category);
+        formData.append('certificate_start_date', startDate);
+        formData.append('certificate_end_date', endDate);
+        formData.append('certificate_name', name);
+        formData.append('certificate_website', url);
+        formData.append('certificate_description', description);
     }
 
     const onClose = () =>
     {
         setIsOpened(false);
     };
-
-    console.log('startDate : ', startDate);
-    console.log('type : ', typeof startDate);
 
     return (
         <AppLayout category="Register" menu="Certificate" >

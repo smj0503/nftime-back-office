@@ -12,6 +12,7 @@ import styles from "../../styles/Register.module.css";
 
 export default function ()
 {
+    /* Local Fields */
     const router = useRouter();
 
     const [image, setImage] = useState('');
@@ -21,10 +22,16 @@ export default function ()
 
     const [isOpened, setIsOpened] = useState(true);
 
+    /* User Actions */
     const onSubmit = async (e) =>
     {
         e.preventDefault();
-        console.log('submit');
+
+        const formData = new FormData();
+        formData.append('company_image', image);
+        formData.append('company_name', name);
+        formData.append('company_description', description);
+        formData.append('company_website', url);
     };
 
     const onClick = async () =>
@@ -50,9 +57,9 @@ export default function ()
                     <ActionButton type="submit" width={185} disabled={ !(!!image && !!name && !!description && !!url) } onClick={ onSubmit }>{ "Register" }</ActionButton>
                 </div>
             </form>
-            {
-                isOpened && <Toast state="fail" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick }/>
-            }
+            {/*{*/}
+            {/*    isOpened && <Toast state="fail" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick }/>*/}
+            {/*}*/}
         </AppLayout>
     )
 }
