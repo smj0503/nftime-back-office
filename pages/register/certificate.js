@@ -28,6 +28,7 @@ export default function ()
     const onSubmit = async (e) =>
     {
         e.preventDefault();
+
         const formData = new FormData();
         formData.append('certificate_image', image);
         formData.append('company_name', company);
@@ -48,7 +49,6 @@ export default function ()
         <AppLayout category="Register" menu="Certificate" >
             <form className={ styles.container } onSubmit={ onSubmit }>
                 <span className={ styles.title }>{ "Register Certificate" }</span>
-
                 <div className={ styles.formContainer }>
                     <div className={ styles.inputContainer }>
                         <ImageUploader setImage={ setImage }>{ "Certificate Image" }</ImageUploader>
@@ -63,12 +63,16 @@ export default function ()
                             setUrl={ setUrl }
                         />
                     </div>
-                    <ActionButton type="submit" width={185} disabled={ !(!!image && !!name && !!description && !!url) }>{ "Register" }</ActionButton>
+                    <ActionButton
+                        type="submit"
+                        width={185}
+                        disabled={ !(!!image && !!name && !!description && !!url && !!company && !!category && !!startDate && !!endDate) }
+                    >{ "Register" }</ActionButton>
                 </div>
             </form>
-            {
-                isOpened && <Toast state="success" message="Your certificate has been registered!" close={ onClose } onClick={ onClose }/>
-            }
+            {/*{*/}
+            {/*    isOpened && <Toast state="success" message="Your certificate has been registered!" close={ onClose } onClick={ onClose }/>*/}
+            {/*}*/}
         </AppLayout>
     )
 }

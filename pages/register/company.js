@@ -48,7 +48,6 @@ export default function ()
         <AppLayout category="Register" menu="Company" >
             <form className={ styles.container } onSubmit={ onSubmit }>
                 <span className={ styles.title }>{ "Register Company" }</span>
-
                 <div className={ styles.formContainer }>
                     <div className={ styles.inputContainer }>
                         <ImageUploader setImage={ setImage }>{ "Company Image" }</ImageUploader>
