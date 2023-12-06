@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { registerCertificate } from "@/apis/register.api";
 
 import AppLayout from "@/components/AppLayout";
 import ImageUploader from "@/components/ImageUploader";
@@ -38,6 +39,8 @@ export default function ()
         formData.append('certificate_name', name);
         formData.append('certificate_website', url);
         formData.append('certificate_description', description);
+
+        await registerCertificate(formData);
     }
 
     const onClose = () =>
