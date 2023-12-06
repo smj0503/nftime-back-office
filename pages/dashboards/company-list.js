@@ -17,12 +17,14 @@ export default function ()
     const [statistics, setStatistics] = useState();
     const [companyList, setCompanyList] = useState([]);
 
-    // asyncEffect(async () =>
-    // {
-    //     const { statistics } = await getStatistics();
-    //
-    //     console.log('result : ', statistics);
-    // });
+    asyncEffect(async () =>
+    {
+        const { statistics } = await getStatistics();
+        console.log('result : ', statistics);
+
+        const list = getCompanyList();
+        console.log('list : ', list);
+    });
 
     return (
         <AppLayout category="Dashboards" menu="Company list" >

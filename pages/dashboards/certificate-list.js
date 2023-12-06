@@ -17,12 +17,14 @@ export default function ()
     const [statistics, setStatistics] = useState();
     const [certificateList, setCertificateList] = useState([]);
 
-    // asyncEffect(async () =>
-    // {
-    //     const { statistics } = await getStatistics();
-    //
-    //     console.log('result : ', statistics);
-    // });
+    asyncEffect(async () =>
+    {
+        // const { statistics } = await getStatistics();
+        // console.log('result : ', statistics);
+
+        const list = await getCertificateList();
+        console.log('list : ', list);
+    });
 
     return (
         <AppLayout category="Dashboards" menu="Certificate list" >

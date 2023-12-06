@@ -4,11 +4,11 @@ export const getStatistics = async () =>
 {
     try
     {
-        return await axios.get('https://3.39.120.32:9200/back-office/stat');
+        return await axios.get('http://13.125.30.25:9200/back-office/stat');
     }
     catch (error)
     {
-        throw error;
+        return error;
     }
 };
 
@@ -16,11 +16,11 @@ export const getCompanyList = async () =>
 {
     try
     {
-        return await axios.get('https://3.39.120.32:9200/company/list');
+        return await axios.get('http://13.125.30.25:9200/company/list');
     }
     catch (error)
     {
-        throw error;
+        return error;
     }
 };
 
@@ -28,10 +28,10 @@ export const getCertificateList = async () =>
 {
     try
     {
-        return await axios.get('https://3.39.120.32:9200/certificate/list');
+        return await axios.get('http://13.125.30.25:9200/certificate/list');
     }
     catch (error)
     {
-        throw error;
+        return error;
     }
 };
