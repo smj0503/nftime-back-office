@@ -10,6 +10,7 @@ export const getStatistics = async () =>
     }
     catch (error)
     {
+        console.log(error);
         return error;
     }
 };
