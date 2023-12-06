@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
-// import { registerCompany } from "@/apis/register";
+import { registerCompany } from "@/apis/register.api";
 
 import AppLayout from "@/components/AppLayout";
 import ImageUploader from "@/components/ImageUploader";
@@ -32,6 +32,8 @@ export default function ()
         formData.append('company_name', name);
         formData.append('company_description', description);
         formData.append('company_website', url);
+
+        await registerCompany(formData);
     };
 
     const onClick = async () =>
