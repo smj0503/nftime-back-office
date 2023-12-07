@@ -42,27 +42,28 @@ export default function ({ setCompany, setCategory, setStartDate, setEndDate, se
             <div className={ styles.pair }>
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "Choose Company" }</label>
-                    <select className={ styles.input } onChange={ onChangeName }>
+                    <input type="text" className={ styles.input } onChange={ onChangeCompany }/>
+                </div>
+                <div className={ styles.item }>
+                    <label className={ styles.label }>{ "Certificate Category" }</label>
+                    <select className={ styles.input } onChange={ onChangeCategory }>
+                        <option>{ "Choose Category" }</option>
                         <option>{ "Diploma" }</option>
                         <option>{ "Contest" }</option>
                         <option>{ "License" }</option>
                         <option>{ "Others" }</option>
                     </select>
                 </div>
-                <div className={ styles.item }>
-                    <label className={ styles.label }>{ "Certificate Category" }</label>
-                    <input className={ styles.input } onChange={ onChangeCategory }/>
-                </div>
             </div>
 
             <div className={ styles.pair }>
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "Start date" }</label>
-                    <input type="date" className={ styles.input } onChange={ onChangeStartDate } placeholder="YYYY.MM.DD"/>
+                    <input type="text" className={ styles.input } onChange={ onChangeStartDate }/>
                 </div>
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "End date" }</label>
-                    <input type="date" className={ styles.input } onChange={ onChangeEndDate } placeholder=""/>
+                    <input type="text" className={ styles.input } onChange={ onChangeEndDate }/>
                 </div>
             </div>
 
