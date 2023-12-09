@@ -27,9 +27,9 @@ export default function ({ companyList })
                         return (
                             <CompanyItem
                                 key={ index }
-                                image={ company.company_image }
-                                name={ company.company_name }
-                                description={ company.company_description }
+                                // image={ company.CompanyImage }
+                                name={ company.CompanyName }
+                                description={ company.CompanyDescription }
                                 certificateNum={ company.certificate_register_count}
                                 issueNum={ company.certificate_issue_count }
                                 date={ company.company_register_date }

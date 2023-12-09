@@ -19,10 +19,11 @@ export default function ()
 
     asyncEffect(async () =>
     {
-        const { statistics } = await getStatistics();
-        console.log('result : ', statistics);
+        const stat = await getStatistics();
+        setStatistics(stat);
 
-        const list = getCompanyList();
+        const list = await getCompanyList();
+        setCompanyList(list);
         console.log('list : ', list);
     });
 
