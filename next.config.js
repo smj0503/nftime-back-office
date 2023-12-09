@@ -8,10 +8,10 @@ module.exports = {
         })
         return config
     },
-    trailingSlash: true,
-    images: {
-        loader: 'akamai',
-        path: '/',
-    },
-    output: 'export',
+    // trailingSlash: true,
+    // images: {
+    //     loader: 'akamai',
+    //     path: '/',
+    // },
+    // output: 'export',
 }

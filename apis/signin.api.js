@@ -8,6 +8,8 @@ export const signin = async (id, password) =>
     }
     catch (error)
     {
-        throw error;
+        console.log('error : ', error);
+
+        return error;
     }
 };
