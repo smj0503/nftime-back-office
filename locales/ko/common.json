@@ -1,0 +1,49 @@
+{
+  "locale": "ko",
+  "signIn": {
+    "loginToYourAccount": "Log in to your account",
+    "pleaseEnterYourDetails": "Please enter your details.",
+    "login": "Login"
+  },
+  "topBar": {
+    "register": "Register",
+    "company": "Company",
+    "certificate": "Certificate"
+  },
+  "sideBar": {
+    "register": "Register",
+    "company": "Company",
+    "certificate": "Certificate",
+    "issue": "Issue",
+    "dashboards": "Dashboards",
+    "companyList": "Company list",
+    "certificateList": "Certificate list",
+    "logout": "Log out"
+  },
+  "register": {
+    "company": {
+      "registerCompany": "Register Company",
+      "image": "Company Image",
+      "name": "Company Name",
+      "description": "Company Description",
+      "website": "Company Website",
+      "fileTypes": "Click upload Logo, allowed file types: png, jpg, jpeg.",
+      "register": "Register"
+    },
+    "certificate": {
+      "registerCertificate": "Register Certificate",
+      "image": "Certificate Image",
+      "companyName": "Company Name",
+      "chooseCompany": "Choose Company",
+      "certificateCategory": "Certificate Category",
+      "chooseCertificate": "Choose Certificate",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "name": "Certificate Name",
+      "description": "Certificate Description",
+      "website": "Certificate Website",
+      "fileTypes": "Click upload Logo, allowed file types: png, jpg, jpeg.",
+      "register": "Register"
+    }
+  }
+}
