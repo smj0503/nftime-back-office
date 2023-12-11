@@ -59,5 +59,11 @@
     "issue": "Issue",
     "date": "Date",
     "category": "Category"
+  },
+  "issue": {
+
+  },
+  "toast": {
+
   }
 }
