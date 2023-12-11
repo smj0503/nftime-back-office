@@ -7,6 +7,8 @@
   },
   "topBar": {
     "register": "Register",
+    "dashboards": "Dashboards",
+    "issue": "Issue",
     "company": "Company",
     "certificate": "Certificate"
   },
@@ -45,5 +47,17 @@
       "fileTypes": "Click upload Logo, allowed file types: png, jpg, jpeg.",
       "register": "Register"
     }
+  },
+  "dashboards": {
+    "registeredCompany": "Registered Company",
+    "registeredCertificate": "Registered Certificate",
+    "issuedCertificate": "Issued Certificate",
+    "companyList": "Company list",
+    "certificateList": "Certificate list",
+    "company": "Company",
+    "certificate": "Certificate",
+    "issue": "Issue",
+    "date": "Date",
+    "category": "Category"
   }
 }
