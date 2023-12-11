@@ -11,7 +11,10 @@
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
     "axios": "^1.6.2",
+    "dotenv-webpack": "^8.0.1",
     "next": "14.0.3",
+    "next-translate": "^2.6.2",
+    "next-translate-plugin": "^2.6.2",
     "react": "^18",
     "react-dom": "^18",
     "react-paginate": "^8.2.0"
