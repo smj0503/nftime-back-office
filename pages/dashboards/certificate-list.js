@@ -22,24 +22,25 @@ export default function ()
 
     asyncEffect(async () =>
     {
-        const { statistics } = await getStatistics();
-        console.log('result : ', statistics);
+        const stat = await getStatistics();
+        setStatistics(stat);
 
         const list = await getCertificateList();
+        setCertificateList(list);
         console.log('list : ', list);
     });
 
     return (
         <AppLayout category={ t("topBar.dashboards") } menu={ t("topBar.certificateList") } >
             <div className={ styles.container }>
-                <span className={ styles.title }>{ "Certificate list" }</span>
+                <span className={ styles.title }>{ t("dashboards.certificateList") }</span>
                 <div className={ styles.statusContainer }>
                     {
                         statistics && (
                             <>
-                                <StatusBox icon={ <IconCompany/> } count={ statistics.registered_company_cnt } color={ "rgba(0, 158, 208, 0.10)" }>{ "Registered Company" }</StatusBox>
-                                <StatusBox icon={ <IconCertificate/> } count={ statistics.registered_certificate_cnt } color={ "rgba(48, 255, 205, 0.10)" }>{ "Registered Certificate" }</StatusBox>
-                                <StatusBox icon={ <IconIssue/> } count={ statistics.issued_certificate_cnt } color={ "rgba(42, 208, 0, 0.10)" }>{ "Issued Certificate" }</StatusBox>
+                                <StatusBox icon={ <IconCompany/> } count={ statistics.registered_company_cnt } color={ "rgba(0, 158, 208, 0.10)" }>{ t("dashboards.registeredCompany") }</StatusBox>
+                                <StatusBox icon={ <IconCertificate/> } count={ statistics.registered_certificate_cnt } color={ "rgba(48, 255, 205, 0.10)" }>{ t("dashboards.registeredCertificate") }</StatusBox>
+                                <StatusBox icon={ <IconIssue/> } count={ statistics.issued_certificate_cnt } color={ "rgba(42, 208, 0, 0.10)" }>{ t("dashboards.issuedCertificate") }</StatusBox>
                             </>
                         )
                     }

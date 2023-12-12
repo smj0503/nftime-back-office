@@ -1,3 +1,4 @@
+import useTranslation from "next-translate/useTranslation";
 import { useState } from "react";
 import { asyncEffect } from "@/common/utils";
 
@@ -14,6 +15,8 @@ import IconIssue from "../../public/assets/icon-issue-28.svg";
 
 export default function ()
 {
+    const { t } = useTranslation("common");
+
     const [statistics, setStatistics] = useState();
     const [companyList, setCompanyList] = useState([]);
 
@@ -28,16 +31,16 @@ export default function ()
     });
 
     return (
-        <AppLayout category="Dashboards" menu="Company list" >
+        <AppLayout category={ t("topBar.dashboards") } menu={ t("topBar.companyList") } >
             <div className={ styles.container }>
-                <span className={ styles.title }>{ "Company list" }</span>
+                <span className={ styles.title }>{ t("dashboards.companyList") }</span>
                 <div className={ styles.statusContainer }>
                     {
                         statistics && (
                             <>
-                                <StatusBox icon={ <IconCompany/> } count={ statistics.registered_company_cnt } color={ "rgba(0, 158, 208, 0.10)" }>{ "Registered Company" }</StatusBox>
-                                <StatusBox icon={ <IconCertificate/> } count={ statistics.registered_certificate_cnt } color={ "rgba(48, 255, 205, 0.10)" }>{ "Registered Certificate" }</StatusBox>
-                                <StatusBox icon={ <IconIssue/> } count={ statistics.issued_certificate_cnt } color={ "rgba(42, 208, 0, 0.10)" }>{ "Issued Certificate" }</StatusBox>
+                                <StatusBox icon={ <IconCompany/> } count={ statistics.registered_company_cnt } color={ "rgba(0, 158, 208, 0.10)" }>{ t("dashboards.registeredCompany") }</StatusBox>
+                                <StatusBox icon={ <IconCertificate/> } count={ statistics.registered_certificate_cnt } color={ "rgba(48, 255, 205, 0.10)" }>{ t("dashboards.registeredCertificate") }</StatusBox>
+                                <StatusBox icon={ <IconIssue/> } count={ statistics.issued_certificate_cnt } color={ "rgba(42, 208, 0, 0.10)" }>{ t("dashboards.issuedCertificate") }</StatusBox>
                             </>
                         )
                     }
