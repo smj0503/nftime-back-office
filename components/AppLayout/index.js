@@ -1,4 +1,5 @@
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 
 import MenuButton from "@/components/MenuButton";
 
@@ -17,27 +18,29 @@ import IconAlarm from "../../public/assets/icon-alarm-28.svg";
 
 export default function ({ category, menu, children })
 {
+    const { t } = useTranslation("common");
+
     return (
         <div className={ styles.backgroundContainer }>
             <div className={ styles.sidebar }>
                 <div className={ styles.menus }>
                     <Link href="/"><Logo/></Link>
                     <div className={ styles.category }>
-                        <div className={ styles.title }><span>{ "Register" }</span></div>
-                        <MenuButton href="/register/company" icon={ <IconCompany/> } leftPadding={true}>{ "Company" }</MenuButton>
-                        <MenuButton href="/register/certificate" icon={ <IconCertificate/> } leftPadding={true}>{ "Certificate" }</MenuButton>
+                        <div className={ styles.title }><span>{ t("sideBar.register") }</span></div>
+                        <MenuButton href="/register/company" icon={ <IconCompany/> } leftPadding={true}>{ t("sideBar.company") }</MenuButton>
+                        <MenuButton href="/register/certificate" icon={ <IconCertificate/> } leftPadding={true}>{ t("sideBar.certificate") }</MenuButton>
                     </div>
                     <div className={ styles.category }>
-                        <div className={ styles.title }><span>{ "Issue" }</span></div>
-                        <MenuButton href="/issue/certificate" icon={ <IconIssue/> } leftPadding={true}>{ "Certificate" }</MenuButton>
+                        <div className={ styles.title }><span>{ t("sideBar.issue") }</span></div>
+                        <MenuButton href="/issue/certificate" icon={ <IconIssue/> } leftPadding={true}>{ t("sideBar.certificate") }</MenuButton>
                     </div>
                     <div className={ styles.category }>
-                        <div className={ styles.title }><span>{ "Dashboards" }</span></div>
-                        <MenuButton href="/dashboards/company-list" icon={ <IconGrayDot/> } leftPadding={true}>{ "Company list" }</MenuButton>
-                        <MenuButton href="/dashboards/certificate-list" icon={ <IconGrayDot/> } leftPadding={true}>{ "Certificate list" }</MenuButton>
+                        <div className={ styles.title }><span>{ t("sideBar.dashboards") }</span></div>
+                        <MenuButton href="/dashboards/company-list" icon={ <IconGrayDot/> } leftPadding={true}>{ t("sideBar.companyList") }</MenuButton>
+                        <MenuButton href="/dashboards/certificate-list" icon={ <IconGrayDot/> } leftPadding={true}>{ t("sideBar.certificateList") }</MenuButton>
                     </div>
                 </div>
-                <MenuButton href="/" icon={ <IconLogout/> }>{ "Log out" }</MenuButton>
+                <MenuButton href="/" icon={ <IconLogout/> }>{ t("sideBar.logout") }</MenuButton>
             </div>
 
             <div className={ styles.topBar }>

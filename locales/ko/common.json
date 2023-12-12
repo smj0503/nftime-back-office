@@ -10,7 +10,9 @@
     "dashboards": "Dashboards",
     "issue": "Issue",
     "company": "Company",
-    "certificate": "Certificate"
+    "certificate": "Certificate",
+    "companyList": "Company list",
+    "certificateList": "Certificate list"
   },
   "sideBar": {
     "register": "Register",

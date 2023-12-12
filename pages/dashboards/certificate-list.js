@@ -30,7 +30,7 @@ export default function ()
     });
 
     return (
-        <AppLayout category="Dashboards" menu="Certificate list" >
+        <AppLayout category={ t("topBar.dashboards") } menu={ t("topBar.certificateList") } >
             <div className={ styles.container }>
                 <span className={ styles.title }>{ "Certificate list" }</span>
                 <div className={ styles.statusContainer }>
