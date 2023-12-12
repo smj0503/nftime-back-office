@@ -25,14 +25,14 @@
     "logout": "Log out"
   },
   "register": {
+    "buttonTitle": "Register",
+    "fileTypes": "Click upload Logo, allowed file types: png, jpg, jpeg.",
     "company": {
       "registerCompany": "Register Company",
       "image": "Company Image",
       "name": "Company Name",
       "description": "Company Description",
-      "website": "Company Website",
-      "fileTypes": "Click upload Logo, allowed file types: png, jpg, jpeg.",
-      "register": "Register"
+      "website": "Company Website"
     },
     "certificate": {
       "registerCertificate": "Register Certificate",
@@ -45,9 +45,7 @@
       "endDate": "End Date",
       "name": "Certificate Name",
       "description": "Certificate Description",
-      "website": "Certificate Website",
-      "fileTypes": "Click upload Logo, allowed file types: png, jpg, jpeg.",
-      "register": "Register"
+      "website": "Certificate Website"
     }
   },
   "dashboards": {

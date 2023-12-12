@@ -1,3 +1,4 @@
+import useTranslation from "next-translate/useTranslation";
 import { useState } from "react";
 import { registerCertificate } from "@/apis/register.api";
 
@@ -12,6 +13,7 @@ import styles from "../../styles/Register.module.css";
 export default function ()
 {
     /* Local Fields */
+    const { t } = useTranslation("common");
     const [image, setImage] = useState('');
 
     const [company, setCompany] = useState('');
@@ -49,12 +51,12 @@ export default function ()
     };
 
     return (
-        <AppLayout category="Register" menu="Certificate" >
+        <AppLayout category={ t("topBar.register") } menu={ t("topBar.certificate") } >
             <form className={ styles.container } onSubmit={ onSubmit }>
-                <span className={ styles.title }>{ "Register Certificate" }</span>
+                <span className={ styles.title }>{ t("register.certificate.registerCertificate") }</span>
                 <div className={ styles.formContainer }>
                     <div className={ styles.inputContainer }>
-                        <ImageUploader setImage={ setImage }>{ "Certificate Image" }</ImageUploader>
+                        <ImageUploader setImage={ setImage }>{ t("register.certificate.image") }</ImageUploader>
                         <CertificateRegisterContainer
                             setImage={ setImage }
                             setCompany={ setCompany }
