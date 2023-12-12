@@ -1,3 +1,4 @@
+import useTranslation from "next-translate/useTranslation";
 import { useState } from "react";
 import { asyncEffect } from "@/common/utils";
 
@@ -14,13 +15,15 @@ import IconIssue from "../../public/assets/icon-issue-28.svg";
 
 export default function ()
 {
+    const { t } = useTranslation("common");
+
     const [statistics, setStatistics] = useState();
     const [certificateList, setCertificateList] = useState([]);
 
     asyncEffect(async () =>
     {
-        // const { statistics } = await getStatistics();
-        // console.log('result : ', statistics);
+        const { statistics } = await getStatistics();
+        console.log('result : ', statistics);
 
         const list = await getCertificateList();
         console.log('list : ', list);

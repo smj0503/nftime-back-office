@@ -1,4 +1,5 @@
 import Image from "next/image";
+import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
@@ -12,6 +13,7 @@ import Thumbnail from "/public/assets/photo/photo-login.png";
 
 export default function ()
 {
+    const { t } = useTranslation("common");
     const router = useRouter();
 
     const [id, setId] = useState('');
@@ -45,14 +47,14 @@ export default function ()
                 <div className={ styles.loginBox }>
                     <Logo/>
                     <div className={ styles.description }>
-                        <span className={ styles.title }>{ "Log in to your account" }</span>
-                        <span className={ styles.subTitle }>{ "Please enter your details." }</span>
+                        <span className={ styles.title }>{ t("signIn.loginToYourAccount") }</span>
+                        <span className={ styles.subTitle }>{ t("signIn.pleaseEnterYourDetails") }</span>
                     </div>
                     <div className={ styles.inputContainer }>
                         <input type="text" placeholder="ID" onChange={ onIdChange }/>
                         <input type="password" placeholder="Password" onChange={ onPasswordChange }/>
                     </div>
-                    <ActionButton disabled={ !(!!id && !!password) } width={322} onClick={ onClick }>{ "Login" }</ActionButton>
+                    <ActionButton disabled={ !(!!id && !!password) } width={322} onClick={ onClick }>{ t("signIn.login") }</ActionButton>
                 </div>
             </div>
         </div>
