@@ -61,7 +61,12 @@
     "category": "Category"
   },
   "issue": {
-
+    "issueDigitalCertificate": "Issue Digital Certificate",
+    "profile": "Certificate Profile",
+    "certificate": "Certificate Name",
+    "receiver": "Receiver",
+    "walletAddress": "Receiver Wallet Address",
+    "buttonTitle": "Issue"
   },
   "toast": {
 
