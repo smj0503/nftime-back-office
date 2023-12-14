@@ -42,7 +42,7 @@ export default function ({ children, setImage })
                     photo ? (
                         <img src={ photo } alt="test" className={ styles.img }/>
                     ) : (
-                        <button type="button" className={ styles.uploadButton } onClick={ _onClick }>
+                        <button type="button" className={ styles.uploadButton } onClick={ _onClick } data-button-animation={true}>
                             <IconPhoto/>
                         </button>
                     )
