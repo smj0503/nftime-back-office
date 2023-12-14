@@ -24,7 +24,7 @@ export default function ({ category, menu, children })
         <div className={ styles.backgroundContainer }>
             <div className={ styles.sidebar }>
                 <div className={ styles.menus }>
-                    <Link href="/"><Logo/></Link>
+                    <Logo/>
                     <div className={ styles.category }>
                         <div className={ styles.title }><span>{ t("sideBar.register") }</span></div>
                         <MenuButton href="/register/company" icon={ <IconCompany/> } leftPadding={true}>{ t("sideBar.company") }</MenuButton>
