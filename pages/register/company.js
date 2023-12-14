@@ -22,7 +22,7 @@ export default function ()
     const [description, setDescription] = useState('');
     const [url, setUrl] = useState('');
 
-    const [isOpened, setIsOpened] = useState(true);
+    const [isOpened, setIsOpened] = useState(false);
 
     /* User Actions */
     const onSubmit = async (e) =>
@@ -35,7 +35,12 @@ export default function ()
         formData.append('company_description', description);
         formData.append('company_website', url);
 
-        await registerCompany(formData);
+        const result = await registerCompany(formData);
+
+        if(result)
+        {
+            setIsOpened(true);
+        }
     };
 
     const onClick = async () =>
@@ -60,9 +65,9 @@ export default function ()
                     <ActionButton type="submit" width={185} disabled={ !(!!image && !!name && !!description && !!url) } onClick={ onSubmit }>{ t("register.buttonTitle") }</ActionButton>
                 </div>
             </form>
-            {/*{*/}
-            {/*    isOpened && <Toast state="fail" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick }/>*/}
-            {/*}*/}
+            {
+                isOpened && <Toast state="fail" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick }/>
+            }
         </AppLayout>
     )
 }
