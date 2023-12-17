@@ -30,20 +30,18 @@ export default function ()
     {
         e.preventDefault();
 
-        // const formData = new FormData();
-        // formData.append('company_image', image);
-        // formData.append('company_name', name);
-        // formData.append('company_description', description);
-        // formData.append('company_website', url);
-        //
-        // const result = await registerCompany(formData);
-        //
+        const formData = new FormData();
+        formData.append('company_image', image);
+        formData.append('company_name', name);
+        formData.append('company_description', description);
+        formData.append('company_website', url);
+
+        const result = await registerCompany(formData);
+
         // if(result)
         // {
         //     setShow(true);
         // }
-
-        setShow(true);
     };
 
     const onClick = async () =>

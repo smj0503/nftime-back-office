@@ -41,7 +41,7 @@ export default function ()
     return (
         <div className={ styles.container }>
             <div className={ styles.thumbnail }>
-                <Image src={ Thumbnail } width={901} height={1022} alt="login image" priority={true}/>
+                <Image src={ Thumbnail } width={726} height={823} alt="login image" className={ styles.image } priority={true}/>
             </div>
             <div className={ styles.login }>
                 <div className={ styles.loginBox }>

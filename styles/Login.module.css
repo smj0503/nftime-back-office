@@ -9,7 +9,14 @@
 .thumbnail
 {
     background-image: url("../public/assets/photo/photo-background.png");
-    overflow: hidden;
+    position: relative;
+}
+
+.image
+{
+    position: absolute;
+    top: 60px;
+    left: 200px;
 }
 
 .login
