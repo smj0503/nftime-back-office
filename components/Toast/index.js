@@ -2,10 +2,10 @@ import styles from "./Toast.module.css";
 import IconCheck from "../../public/assets/icon-check.svg";
 import IconWarning from "../../public/assets/icon-warning.svg";
 
-export default function ({ state, onClick, close, message })
+export default function ({ state, onClick, close, message, show })
 {
     return (
-        <div className={ styles.toast }>
+        <div className={ styles.toast } data-shown={ show }>
             <div className={ styles.notion }>
                 {
                     state === "success" ? <IconCheck/> : <IconWarning/>

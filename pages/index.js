@@ -9,7 +9,7 @@ import ActionButton from "@/components/ActionButton";
 
 import styles from "../styles/Login.module.css";
 import Logo from "/public/assets/logo/logo-signin.svg";
-import Thumbnail from "/public/assets/photo/photo-login.png";
+import Thumbnail from "/public/assets/photo/photo-thumbnail.png";
 
 export default function ()
 {
@@ -41,7 +41,7 @@ export default function ()
     return (
         <div className={ styles.container }>
             <div className={ styles.thumbnail }>
-                <Image src={ Thumbnail } width={683} height={702} alt="login image" priority={true}/>
+                <Image src={ Thumbnail } width={901} height={1022} alt="login image" priority={true}/>
             </div>
             <div className={ styles.login }>
                 <div className={ styles.loginBox }>

@@ -22,25 +22,27 @@ export default function ()
     const [description, setDescription] = useState('');
     const [url, setUrl] = useState('');
 
-    const [isOpened, setIsOpened] = useState(false);
+    const [show, setShow] = useState(false);
 
     /* User Actions */
     const onSubmit = async (e) =>
     {
         e.preventDefault();
 
-        const formData = new FormData();
-        formData.append('company_image', image);
-        formData.append('company_name', name);
-        formData.append('company_description', description);
-        formData.append('company_website', url);
+        // const formData = new FormData();
+        // formData.append('company_image', image);
+        // formData.append('company_name', name);
+        // formData.append('company_description', description);
+        // formData.append('company_website', url);
+        //
+        // const result = await registerCompany(formData);
+        //
+        // if(result)
+        // {
+        //     setShow(true);
+        // }
 
-        const result = await registerCompany(formData);
-
-        if(result)
-        {
-            setIsOpened(true);
-        }
+        setShow(true);
     };
 
     const onClick = async () =>
@@ -50,7 +52,7 @@ export default function ()
 
     const onClose = () =>
     {
-        setIsOpened(false);
+        setShow(false);
     };
 
     return (
@@ -62,12 +64,10 @@ export default function ()
                         <ImageUploader setImage={ setImage }>{ t("register.company.image") }</ImageUploader>
                         <CompanyRegisterContainer setName={ setName } setDescription={ setDescription } setUrl={ setUrl }/>
                     </div>
-                    <ActionButton type="submit" width={185} disabled={ !(!!image && !!name && !!description && !!url) } onClick={ onSubmit }>{ t("register.buttonTitle") }</ActionButton>
+                    <ActionButton type="submit" width={185}  onClick={ onSubmit }>{ t("register.buttonTitle") }</ActionButton>
                 </div>
             </form>
-            {
-                isOpened && <Toast state="fail" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick }/>
-            }
+            <Toast state="fail" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick } show={ show }/>
         </AppLayout>
     )
 }

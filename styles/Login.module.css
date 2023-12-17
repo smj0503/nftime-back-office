@@ -8,11 +8,8 @@
 
 .thumbnail
 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     background-image: url("../public/assets/photo/photo-background.png");
+    overflow: hidden;
 }
 
 .login
