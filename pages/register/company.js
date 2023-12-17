@@ -23,6 +23,7 @@ export default function ()
     const [url, setUrl] = useState('');
 
     const [show, setShow] = useState(false);
+    const [success, setSuccess] = useState(false);
 
     /* User Actions */
     const onSubmit = async (e) =>
@@ -67,7 +68,7 @@ export default function ()
                     <ActionButton type="submit" width={185}  onClick={ onSubmit }>{ t("register.buttonTitle") }</ActionButton>
                 </div>
             </form>
-            <Toast state="fail" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick } show={ show }/>
+            <Toast state={ success } type="register" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick } show={ show }/>
         </AppLayout>
     )
 }
