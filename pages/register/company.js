@@ -70,7 +70,7 @@ export default function ()
                         <ImageUploader setImage={ setImage }>{ t("register.company.image") }</ImageUploader>
                         <CompanyRegisterContainer setName={ setName } setDescription={ setDescription } setUrl={ setUrl }/>
                     </div>
-                    <ActionButton type="submit" width={185}  onClick={ onSubmit }>{ t("register.buttonTitle") }</ActionButton>
+                    <ActionButton type="submit" width={185} onClick={ onSubmit }>{ t("register.buttonTitle") }</ActionButton>
                 </div>
             </form>
             <Toast state={ success } type="register" message="Would you like to register a certificate as well?" close={ close } onClick={ onClick } show={ show }/>
