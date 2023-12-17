@@ -1,4 +1,5 @@
 import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { registerCertificate } from "@/apis/register.api";
 
@@ -14,6 +15,8 @@ export default function ()
 {
     /* Local Fields */
     const { t } = useTranslation("common");
+    const router = useRouter();
+
     const [image, setImage] = useState('');
 
     const [company, setCompany] = useState('');
@@ -25,7 +28,8 @@ export default function ()
     const [url, setUrl] = useState('');
     const [description, setDescription] = useState('');
 
-    const [isOpened, setIsOpened] = useState(true);
+    const [show, setShow] = useState(false);
+    const [success, setSuccess] = useState(false);
 
     /* User Actions */
     const onSubmit = async (e) =>
@@ -42,12 +46,29 @@ export default function ()
         formData.append('certificate_website', url);
         formData.append('certificate_description', description);
 
-        await registerCertificate(formData);
+        const result = await registerCertificate(formData);
+        console.log('result : ', result);
+
+        if(result === 'OK')
+        {
+            setSuccess(true);
+        }
+        else
+        {
+            setSuccess(false);
+        }
+
+        setShow(true);
     }
 
-    const onClose = () =>
+    const onClick = async () =>
     {
-        setIsOpened(false);
+        await router.push('/register/certificate');
+    };
+
+    const close = () =>
+    {
+        setShow(false);
     };
 
     return (
@@ -75,9 +96,7 @@ export default function ()
                     >{ "Register" }</ActionButton>
                 </div>
             </form>
-            {/*{*/}
-            {/*    isOpened && <Toast state="success" message="Your certificate has been registered!" close={ onClose } onClick={ onClose }/>*/}
-            {/*}*/}
+            <Toast state={ success } type="register" message="Would you like to issue a certificate as well?" close={ close } onClick={ onClick } show={ show }/>
         </AppLayout>
     )
 }

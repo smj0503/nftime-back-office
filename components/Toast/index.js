@@ -6,16 +6,16 @@ import IconWarning from "../../public/assets/icon-warning.svg";
 
 export default function ({ state, onClick, close, message, show, type })
 {
-    useEffect(() =>
-    {
-        if(show)
-        {
-            setTimeout(() =>
-            {
-                close();
-            }, 3000);
-        }
-    }, [show]);
+    // useEffect(() =>
+    // {
+    //     if(show)
+    //     {
+    //         setTimeout(() =>
+    //         {
+    //             close();
+    //         }, 3000);
+    //     }
+    // }, [show]);
 
     return (
         <div className={ styles.toast } data-shown={ show }>
@@ -40,7 +40,7 @@ export default function ({ state, onClick, close, message, show, type })
                 </div>
             </div>
             {
-                state === "success" ? (
+                state ? (
                     <div className={ styles.buttonGroup }>
                         {
                             type === "register" ? (

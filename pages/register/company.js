@@ -37,11 +37,18 @@ export default function ()
         formData.append('company_website', url);
 
         const result = await registerCompany(formData);
+        console.log('result : ', result);
 
-        // if(result)
-        // {
-        //     setShow(true);
-        // }
+        if(result === 'OK')
+        {
+            setSuccess(true);
+        }
+        else
+        {
+            setSuccess(false);
+        }
+
+        setShow(true);
     };
 
     const onClick = async () =>
@@ -49,7 +56,7 @@ export default function ()
         await router.push('/register/certificate');
     };
 
-    const onClose = () =>
+    const close = () =>
     {
         setShow(false);
     };
@@ -66,7 +73,7 @@ export default function ()
                     <ActionButton type="submit" width={185}  onClick={ onSubmit }>{ t("register.buttonTitle") }</ActionButton>
                 </div>
             </form>
-            <Toast state={ success } type="register" message="Would you like to register a certificate as well?" close={ onClose } onClick={ onClick } show={ show }/>
+            <Toast state={ success } type="register" message="Would you like to register a certificate as well?" close={ close } onClick={ onClick } show={ show }/>
         </AppLayout>
     )
 }
