@@ -49,14 +49,14 @@ export default function ()
         const result = await registerCertificate(formData);
         console.log('result : ', result);
 
-        if(result === 'OK')
-        {
-            setSuccess(true);
-        }
-        else
-        {
-            setSuccess(false);
-        }
+        // if(result === 'OK')
+        // {
+        //     setSuccess(true);
+        // }
+        // else
+        // {
+        //     setSuccess(false);
+        // }
 
         setShow(true);
     }
@@ -93,7 +93,7 @@ export default function ()
                         type="submit"
                         width={185}
                         disabled={ !(!!image && !!name && !!description && !!url && !!company && !!category && !!startDate && !!endDate) }
-                    >{ "Register" }</ActionButton>
+                    >{ t("register.buttonTitle") }</ActionButton>
                 </div>
             </form>
             <Toast state={ success } type="register" message="Would you like to issue a certificate as well?" close={ close } onClick={ onClick } show={ show }/>
