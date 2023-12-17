@@ -14,8 +14,9 @@ export const registerCertificate = async (formData) =>
 {
     const res = await axios.post('http://13.125.30.25:9200/back-office/certificate/register', formData);
 
-    if(res.data)
-    {
-        return res.data;
-    }
+    // if(res.data)
+    // {
+    //     return res.data;
+    // }
+    return res;
 }
