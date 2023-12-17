@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
 
-    width: 960px;
+    width: 1116px;
 
     padding: 8px 12px;
 }
@@ -37,8 +37,17 @@
     width: 336px;
 }
 
-.data
+.longData
 {
     width: 160px;
 }
 
+.shortData
+{
+    width: 136px;
+}
+
+.date
+{
+    width: 156px;
+}

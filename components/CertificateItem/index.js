@@ -2,7 +2,7 @@ import RemoteImage from "@/components/RemoteImage";
 
 import styles from "./CertificateItem.module.css";
 
-export default function ({ image, name, description, companyName, category, issueNum, date })
+export default function ({ image, name, description, companyName, category, issueNum, startDate, endDate })
 {
     return (
         <div className={ styles.item }>
@@ -13,17 +13,20 @@ export default function ({ image, name, description, companyName, category, issu
                     <span className={ styles.description }>{ description }</span>
                 </div>
             </div>
-            <div className={ styles.data }>
+            <div className={ styles.longData }>
                 <span>{ companyName }</span>
             </div>
-            <div className={ styles.data }>
+            <div className={ styles.longData }>
                 <span>{ category }</span>
             </div>
-            <div className={ styles.data }>
+            <div className={ styles.shortData }>
                 <span>{ issueNum }</span>
             </div>
-            <div className={ styles.data }>
-                <span>{ date }</span>
+            <div className={ styles.date }>
+                <span>{ startDate }</span>
+            </div>
+            <div className={ styles.date }>
+                <span>{ endDate }</span>
             </div>
         </div>
     )

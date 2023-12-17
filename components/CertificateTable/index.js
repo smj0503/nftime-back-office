@@ -10,17 +10,20 @@ export default function ({ certificateList })
                 <div className={ styles.name }>
                     <label>{ "Certificate" }</label>
                 </div>
-                <div className={ styles.data }>
+                <div className={ styles.longData }>
                     <label>{ "Company" }</label>
                 </div>
-                <div className={ styles.data }>
+                <div className={ styles.longData }>
                     <label>{ "Category" }</label>
                 </div>
-                <div className={ styles.data }>
+                <div className={ styles.shortData }>
                     <label>{ "Issue" }</label>
                 </div>
-                <div className={ styles.data }>
-                    <label>{ "Date" }</label>
+                <div className={ styles.date }>
+                    <label>{ "Start Date" }</label>
+                </div>
+                <div className={ styles.date }>
+                    <label>{ "End Date" }</label>
                 </div>
             </div>
             {
@@ -36,7 +39,8 @@ export default function ({ certificateList })
                                 companyName={ certificate.company_name }
                                 category={ certificate.certificate_category }
                                 issueNum={ certificate.issued }
-                                date={ certificate.certificate_register_date }
+                                startDate={ certificate.certificate_start_date.substring(10, -1) }
+                                endDate={ certificate.certificate_end_date.substring(10, -1) }
                             />
                         )
                     })
