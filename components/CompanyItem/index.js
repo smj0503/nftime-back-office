@@ -7,7 +7,7 @@ export default function ({ image, name, description, certificateNum, issueNum, d
     return (
         <div className={ styles.item }>
             <div className={ styles.info }>
-                <RemoteImage src={ image } shape="company image"/>
+                <RemoteImage src={ image } shape="company"/>
                 <div className={ styles.text }>
                     <span>{ name }</span>
                     <span className={ styles.description }>{ description }</span>
