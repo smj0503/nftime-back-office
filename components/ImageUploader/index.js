@@ -16,11 +16,9 @@ export default function ({ children, setImage })
         {
             const data = event.target.result;
             setPhoto(data);
-            setImage(data);
         };
 
-        // setImage(e.target.files[0]);
-
+        setImage(e.target.files[0]);
         reader.readAsDataURL(e.target.files[0]);
     };
 
