@@ -16,26 +16,14 @@ export default function ()
     const { t } = useTranslation("common");
     const router = useRouter();
 
-    const [id, setId] = useState('');
-    const [password, setPassword] = useState('');
-
-    const onIdChange = (e) =>
+    const onSubmit = async (e) =>
     {
-        setId(e.target.value);
-    };
+        e.preventDefault();
 
-    const onPasswordChange = (e) =>
-    {
-        setPassword(e.target.value);
-    };
+        // const result = await signin(id, password);
+        // console.log('result : ', result);
 
-    const onClick = async () =>
-    {
-        const result = await signin(id, password);
-
-        console.log('result : ', result);
-
-        // await router.push('/register/company');
+        await router.replace('/register/company');
     };
 
     return (
@@ -44,18 +32,18 @@ export default function ()
                 <Image src={ Thumbnail } width={726} height={823} alt="login image" className={ styles.image } priority={true}/>
             </div>
             <div className={ styles.login }>
-                <div className={ styles.loginBox }>
+                <form className={ styles.loginBox } onSubmit={ onSubmit }>
                     <Logo/>
                     <div className={ styles.description }>
                         <span className={ styles.title }>{ t("signIn.loginToYourAccount") }</span>
                         <span className={ styles.subTitle }>{ t("signIn.pleaseEnterYourDetails") }</span>
                     </div>
                     <div className={ styles.inputContainer }>
-                        <input type="text" placeholder="ID" onChange={ onIdChange }/>
-                        <input type="password" placeholder="Password" onChange={ onPasswordChange }/>
+                        <input type="id" name="id" placeholder="ID" required={true}/>
+                        <input type="password" name="password" placeholder="Password" required={true}/>
                     </div>
-                    <ActionButton disabled={ !(!!id && !!password) } width={322} onClick={ onClick }>{ t("signIn.login") }</ActionButton>
-                </div>
+                    <ActionButton type="submit" width={322}>{ t("signIn.login") }</ActionButton>
+                </form>
             </div>
         </div>
     )
