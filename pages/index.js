@@ -39,7 +39,7 @@ export default function ()
                         <span className={ styles.subTitle }>{ t("signIn.pleaseEnterYourDetails") }</span>
                     </div>
                     <div className={ styles.inputContainer }>
-                        <input type="id" name="id" placeholder="ID" required={true}/>
+                        <input type="text" name="id" placeholder="ID" required={true}/>
                         <input type="password" name="password" placeholder="Password" required={true}/>
                     </div>
                     <ActionButton type="submit" width={322}>{ t("signIn.login") }</ActionButton>
