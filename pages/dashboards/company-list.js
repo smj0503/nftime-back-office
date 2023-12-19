@@ -27,7 +27,6 @@ export default function ()
 
         const list = await getCompanyList();
         setCompanyList(list);
-        console.log('list : ', list);
     });
 
     return (

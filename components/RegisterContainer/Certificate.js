@@ -1,6 +1,6 @@
 import styles from "./RegisterContainer.module.css";
 
-export default function ({ setCompany, setCategory, setStartDate, setEndDate, setName, setDescription, setUrl })
+export default function ({ setCompany, setCategory, setStartDate, setEndDate, setName, setDescription, setUrl, companyList })
 {
     const onChangeCompany = (e) =>
     {
@@ -42,7 +42,14 @@ export default function ({ setCompany, setCategory, setStartDate, setEndDate, se
             <div className={ styles.pair }>
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "Choose Company" }</label>
-                    <input type="text" className={ styles.input } onChange={ onChangeCompany }/>
+                    <select className={ styles.input } onChange={ onChangeCompany }>
+                        <option>{ "Choose Company" }</option>
+                        {
+                            companyList.map((company, index) => {
+                                return <option key={ index }>{ company.company_name }</option>
+                            })
+                        }
+                    </select>
                 </div>
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "Certificate Category" }</label>
