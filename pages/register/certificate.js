@@ -1,7 +1,10 @@
 import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { asyncEffect } from "@/common/utils";
+
 import { registerCertificate } from "@/apis/register.api";
+import { getCompanyList } from "@/apis/dashboard.api";
 
 import AppLayout from "@/components/AppLayout";
 import ImageUploader from "@/components/ImageUploader";
@@ -17,6 +20,7 @@ export default function ()
     const { t } = useTranslation("common");
     const router = useRouter();
 
+    const [companyList, setCompanyList] = useState([]);
     const [image, setImage] = useState('');
 
     const [company, setCompany] = useState('');
@@ -30,6 +34,13 @@ export default function ()
 
     const [show, setShow] = useState(false);
     const [success, setSuccess] = useState(false);
+
+    /* Life Cycle */
+    asyncEffect(async () =>
+    {
+        const companies = await getCompanyList();
+        setCompanyList(companies);
+    });
 
     /* User Actions */
     const onSubmit = async (e) =>
@@ -49,14 +60,14 @@ export default function ()
         const result = await registerCertificate(formData);
         console.log('result : ', result);
 
-        // if(result === 'OK')
-        // {
-        //     setSuccess(true);
-        // }
-        // else
-        // {
-        //     setSuccess(false);
-        // }
+        if(result === 'success')
+        {
+            setSuccess(true);
+        }
+        else
+        {
+            setSuccess(false);
+        }
 
         setShow(true);
     }
@@ -87,6 +98,7 @@ export default function ()
                             setName={ setName }
                             setDescription={ setDescription }
                             setUrl={ setUrl }
+                            companyList={ companyList }
                         />
                     </div>
                     <ActionButton

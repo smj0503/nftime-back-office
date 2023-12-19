@@ -1,9 +1,8 @@
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
-import { useState } from "react";
 
-import { signin } from "@/apis/signin.api";
+// import { signin } from "@/apis/signin.api";
 
 import ActionButton from "@/components/ActionButton";
 
@@ -20,6 +19,8 @@ export default function ()
     {
         e.preventDefault();
 
+        console.log('id : ', e.target.id.value);
+        console.log('id : ', e.target.password.value);
         // const result = await signin(id, password);
         // console.log('result : ', result);
 
