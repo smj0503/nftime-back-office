@@ -40,10 +40,22 @@ export default function ()
     }, []);
 
     /* User Actions */
-    const onSubmit = (e) =>
+    const onSubmit = async (e) =>
     {
         e.preventDefault();
+        const result = await issueCertificate(certificate, address, receiver);
+        console.log('result : ', result);
 
+        if(result === 'success')
+        {
+            setSuccess(true);
+        }
+        else
+        {
+            setSuccess(false);
+        }
+
+        setShow(true);
     };
 
     const onClick = async () =>

@@ -53,7 +53,7 @@ export default function ({ state, onClick, close, message, show, type })
                                     </button>
                                 </>
                             ) : (
-                                <button type="button" className={styles.button } onClick={ close }>
+                                <button type="button" className={styles.button } onClick={ onClick }>
                                     <label>{ "OK" }</label>
                                 </button>
                             )

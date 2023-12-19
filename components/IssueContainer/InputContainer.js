@@ -4,8 +4,9 @@ export default function ({ setCertificate, setReceiver, setAddress, setImage, ce
 {
     const onChangeCertificate = (e) =>
     {
-        setCertificate(e.target.value);
-        setImage("/assets/photo/photo-certificate-2.png");
+        const target = certificateList.find(certificate => certificate.certificate_name === e.target.value);
+        setCertificate(target.id);
+        setImage(target.certificate_image);
     };
 
     const onChangeReceiver = (e) =>
@@ -17,8 +18,6 @@ export default function ({ setCertificate, setReceiver, setAddress, setImage, ce
     {
         setAddress(e.target.value);
     };
-
-    console.log('list : ', certificateList);
 
     return (
         <div className={ styles.container }>
@@ -33,7 +32,6 @@ export default function ({ setCertificate, setReceiver, setAddress, setImage, ce
                     }
                 </select>
             </div>
-
             <div className={ styles.controller }>
                 <div className={ styles.item }>
                     <label className={ styles.label }>{ "Receiver" }</label>
