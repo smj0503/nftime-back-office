@@ -78,7 +78,7 @@ export default function ()
 
     const onClick = async () =>
     {
-        await router.push('/register/certificate');
+        await router.push('/issue/certificate');
     };
 
     const close = () =>

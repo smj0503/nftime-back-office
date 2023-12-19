@@ -2,7 +2,7 @@ import useTranslation from "next-translate/useTranslation";
 import { useState } from "react";
 import { asyncEffect } from "@/common/utils";
 
-import { getStatistics, getCompanyList } from "@/apis/dashboard.api";
+import useDashboardModule from "@/apis/dashboard.api";
 
 import AppLayout from "@/components/AppLayout";
 import StatusBox from "@/components/StatusBox";
@@ -15,11 +15,16 @@ import IconIssue from "../../public/assets/icon-issue-28.svg";
 
 export default function ()
 {
+    /* Local Fields */
     const { t } = useTranslation("common");
 
     const [statistics, setStatistics] = useState();
     const [companyList, setCompanyList] = useState([]);
 
+    /* APIs */
+    const { getStatistics, getCompanyList } = useDashboardModule();
+
+    /* LifeCycle */
     asyncEffect(async () =>
     {
         const stat = await getStatistics();
