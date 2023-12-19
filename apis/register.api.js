@@ -18,5 +18,4 @@ export const registerCertificate = async (formData) =>
     {
         return res.data;
     }
-    // success 로 통일
 }

@@ -4,12 +4,16 @@
     grid-template-columns: 1fr 1fr;
 
     height: 100vh;
+
+    z-index: 0;
 }
 
 .thumbnail
 {
     background-image: url("../public/assets/photo/photo-background.png");
     position: relative;
+
+    z-index: 1;
 }
 
 .image
@@ -24,6 +28,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    z-index: 2;
 }
 
 .loginBox

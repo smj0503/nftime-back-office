@@ -39,7 +39,7 @@ export default function ()
         const result = await registerCompany(formData);
         console.log('result : ', result);
 
-        if(result === 'OK')
+        if(result === 'success')
         {
             setSuccess(true);
         }

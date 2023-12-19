@@ -49,14 +49,14 @@ export default function ()
         const result = await registerCertificate(formData);
         console.log('result : ', result);
 
-        // if(result === 'OK')
-        // {
-        //     setSuccess(true);
-        // }
-        // else
-        // {
-        //     setSuccess(false);
-        // }
+        if(result === 'success')
+        {
+            setSuccess(true);
+        }
+        else
+        {
+            setSuccess(false);
+        }
 
         setShow(true);
     }
