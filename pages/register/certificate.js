@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { asyncEffect } from "@/common/utils";
 
-import { registerCertificate } from "@/apis/register.api";
+import useRegisterModule from "@/apis/register.api";
 import { getCompanyList } from "@/apis/dashboard.api";
 
 import AppLayout from "@/components/AppLayout";
@@ -34,6 +34,9 @@ export default function ()
 
     const [show, setShow] = useState(false);
     const [success, setSuccess] = useState(false);
+
+    /* APIs */
+    const { registerCertificate } = useRegisterModule();
 
     /* Life Cycle */
     asyncEffect(async () =>

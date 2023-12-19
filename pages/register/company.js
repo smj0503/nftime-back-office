@@ -1,7 +1,8 @@
 import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { registerCompany } from "@/apis/register.api";
+
+import useRegisterModule from "@/apis/register.api";
 
 import AppLayout from "@/components/AppLayout";
 import ImageUploader from "@/components/ImageUploader";
@@ -24,6 +25,9 @@ export default function ()
 
     const [show, setShow] = useState(false);
     const [success, setSuccess] = useState(false);
+
+    /* APIs */
+    const { registerCompany } = useRegisterModule();
 
     /* User Actions */
     const onSubmit = async (e) =>
