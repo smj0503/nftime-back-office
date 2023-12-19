@@ -1,12 +1,14 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { asyncEffect } from "@/common/utils";
 
+import useDashboardModule from "@/apis/dashboard.api";
 import useIssueModule from "@/apis/issue.api";
 
 import AppLayout from "@/components/AppLayout";
-import ImageUploader from "@/components/ImageUploader";
-import ActionButton from "@/components/ActionButton";
+import Image from "@/components/IssueContainer/Image";
 import IssueContainer from "components/IssueContainer/InputContainer";
+import ActionButton from "@/components/ActionButton";
 import Toast from "@/components/Toast";
 
 import styles from "../../styles/Register.module.css";
@@ -16,22 +18,32 @@ export default function ()
     /* Local Fields */
     const router = useRouter();
 
+    const [certificateList, setList] = useState([]);
+
     const [certificate, setCertificate] = useState('');
     const [receiver, setReceiver] = useState('');
     const [address, setAddress] = useState('');
+    const [image, setImage] = useState('');
 
     const [show, setShow] = useState(false);
     const [success, setSuccess] = useState(false);
 
     /* APIs */
+    const { getCertificateList } = useDashboardModule();
     const { issueCertificate } = useIssueModule();
+
+    /* LifeCycle */
+    asyncEffect(async () =>
+    {
+        const list = await getCertificateList();
+        setList(list);
+    }, []);
 
     /* User Actions */
     const onSubmit = (e) =>
     {
         e.preventDefault();
 
-        const formData = new FormData();
     };
 
     const onClick = async () =>
@@ -50,8 +62,8 @@ export default function ()
                 <span className={ styles.title }>{ "Issue Digital Certificate" }</span>
                 <div className={ styles.formContainer }>
                     <div className={ styles.inputContainer }>
-                        {/*<ImageUploader></ImageUploader>*/}
-                        <IssueContainer/>
+                        <Image image={ image }/>
+                        <IssueContainer setCertificate={ setCertificate } setReceiver={ setReceiver } setAddress={ setAddress } setImage={ setImage } certificateList={ certificateList }/>
                     </div>
                     <ActionButton type="submit" width={185} disabled={ !(!!certificate && !!receiver && !!address) }>{ "Issue" }</ActionButton>
                 </div>
