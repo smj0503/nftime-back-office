@@ -1,15 +1,17 @@
 import axios from "axios";
 
-export const signin = async (id, password) =>
+export default function useAuthModule()
 {
-    try
+    const apis = {};
+    apis.signIn = async (id, password) =>
     {
-        return await axios.post('http://13.125.30.25:9200/back-office/login', { id: id, password: password });
-    }
-    catch (error)
-    {
-        console.log('error : ', error);
+        const result = await axios.post('http://13.125.30.25:9200/back-office/login', { id: id, password: password });
 
-        return error;
-    }
-};
+        if(result.data)
+        {
+            return result.data;
+        }
+    };
+
+    return apis;
+}
