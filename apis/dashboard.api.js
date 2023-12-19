@@ -1,40 +1,27 @@
 import axios from "axios";
 
-export const getStatistics = async () =>
-{
-    try
-    {
-        const { data } = await axios.get('http://13.125.30.25:9200/back-office/stat');
-        return data;
-    }
-    catch (error)
-    {
-        return error;
-    }
-};
+const baseUrl = "http://13.125.30.25:9200";
 
-export const getCompanyList = async () =>
+export default function useDashboardModule()
 {
-    try
+    const apis= {};
+    apis.getStatistics = async () =>
     {
-        const { data } = await axios.get('http://13.125.30.25:9200/company/list');
+        const { data } = await axios.get(`${baseUrl}/back-office/stat`);
         return data;
-    }
-    catch (error)
-    {
-        return error;
-    }
-};
+    };
 
-export const getCertificateList = async () =>
-{
-    try
+    apis.getCompanyList = async () =>
     {
-        const { data } = await axios.get('http://13.125.30.25:9200/certificate/list');
+        const { data } = await axios.get(`${baseUrl}/company/list`);
         return data;
-    }
-    catch (error)
+    };
+
+    apis.getCertificateList = async () =>
     {
-        return error;
-    }
-};
+        const { data } = await axios.get(`${baseUrl}/certificate/list`);
+        return data;
+    };
+
+    return apis;
+}

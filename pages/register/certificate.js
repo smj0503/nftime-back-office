@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { asyncEffect } from "@/common/utils";
 
+import useDashboardModule from "@/apis/dashboard.api";
 import useRegisterModule from "@/apis/register.api";
-import { getCompanyList } from "@/apis/dashboard.api";
 
 import AppLayout from "@/components/AppLayout";
 import ImageUploader from "@/components/ImageUploader";
@@ -36,6 +36,7 @@ export default function ()
     const [success, setSuccess] = useState(false);
 
     /* APIs */
+    const { getCompanyList } = useDashboardModule();
     const { registerCertificate } = useRegisterModule();
 
     /* Life Cycle */
