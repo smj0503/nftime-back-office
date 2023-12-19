@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 
+import useIssueModule from "@/apis/issue.api";
+
 import AppLayout from "@/components/AppLayout";
 import ImageUploader from "@/components/ImageUploader";
 import ActionButton from "@/components/ActionButton";
@@ -20,6 +22,9 @@ export default function ()
 
     const [show, setShow] = useState(false);
     const [success, setSuccess] = useState(false);
+
+    /* APIs */
+    const { issueCertificate } = useIssueModule();
 
     /* User Actions */
     const onSubmit = (e) =>
@@ -43,15 +48,13 @@ export default function ()
         <AppLayout category="Issue" menu="Certificate" >
             <form className={ styles.container } onSubmit={ onSubmit }>
                 <span className={ styles.title }>{ "Issue Digital Certificate" }</span>
-
                 <div className={ styles.formContainer }>
                     <div className={ styles.inputContainer }>
-                        <ImageUploader></ImageUploader>
+                        {/*<ImageUploader></ImageUploader>*/}
                         <IssueContainer/>
                     </div>
-                    <ActionButton width={185}>{ "Issue" }</ActionButton>
+                    <ActionButton type="submit" width={185} disabled={ !(!!certificate && !!receiver && !!address) }>{ "Issue" }</ActionButton>
                 </div>
-                <ActionButton type="submit" width={185} disabled={ !(!!certificate && !!receiver && !!address) }>{ "Issue" }</ActionButton>
             </form>
             <Toast state={ success } type="issue" message="Your digital certificate has been issued" close={ close } onClick={ onClick } show={ show }/>
         </AppLayout>

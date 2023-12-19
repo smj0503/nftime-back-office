@@ -1,17 +1,19 @@
 import axios from "axios";
 
-export const issueCertificate = async (certificateName, receiver, address) =>
+const baseUrl = "http://13.125.30.25:9200";
+
+export default function useIssueModule()
 {
-    try
+    const apis = {};
+    apis.issueCertificate = async (certificate, address, receiver) =>
     {
-        return await axios.post('https://3.39.120.32:9200/back-office/certificate/issue', {
-            certificate_name: certificateName,
-            name: receiver,
-            wallet_address: address
-        })
-    }
-    catch (error)
-    {
-        throw error;
-    }
+        const res = await axios.post(`${baseUrl}/back-office/certificate/issue`, { certificate_id: certificate, wallet_address: address, user_name: receiver });
+
+        if(res.data)
+        {
+            return res.data;
+        }
+    };
+
+    return apis;
 }
