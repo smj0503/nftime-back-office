@@ -1,4 +1,74 @@
 {
-  "locale": "ko",
-  "signIn": ""
+  "locale": "en",
+  "signIn": {
+    "loginToYourAccount": "Log in to your account",
+    "pleaseEnterYourDetails": "Please enter your details.",
+    "login": "Login"
+  },
+  "topBar": {
+    "register": "Register",
+    "dashboards": "Dashboards",
+    "issue": "Issue",
+    "company": "Company",
+    "certificate": "Certificate",
+    "companyList": "Company list",
+    "certificateList": "Certificate list"
+  },
+  "sideBar": {
+    "register": "Register",
+    "company": "Company",
+    "certificate": "Certificate",
+    "issue": "Issue",
+    "dashboards": "Dashboards",
+    "companyList": "Company list",
+    "certificateList": "Certificate list",
+    "logout": "Log out"
+  },
+  "register": {
+    "buttonTitle": "Register",
+    "fileTypes": "Click upload Logo, allowed file types:<br/>png, jpg, jpeg.",
+    "company": {
+      "registerCompany": "Register Company",
+      "image": "Company Image",
+      "name": "Company Name",
+      "description": "Company Description",
+      "website": "Company Website"
+    },
+    "certificate": {
+      "registerCertificate": "Register Certificate",
+      "image": "Certificate Image",
+      "companyName": "Company Name",
+      "chooseCompany": "Choose Company",
+      "certificateCategory": "Certificate Category",
+      "chooseCertificate": "Choose Certificate",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "name": "Certificate Name",
+      "description": "Certificate Description",
+      "website": "Certificate Website"
+    }
+  },
+  "dashboards": {
+    "registeredCompany": "Registered Company",
+    "registeredCertificate": "Registered Certificate",
+    "issuedCertificate": "Issued Certificate",
+    "companyList": "Company list",
+    "certificateList": "Certificate list",
+    "company": "Company",
+    "certificate": "Certificate",
+    "issue": "Issue",
+    "date": "Date",
+    "category": "Category"
+  },
+  "issue": {
+    "issueDigitalCertificate": "Issue Digital Certificate",
+    "profile": "Certificate Profile",
+    "certificate": "Certificate Name",
+    "receiver": "Receiver",
+    "walletAddress": "Receiver Wallet Address",
+    "buttonTitle": "Issue"
+  },
+  "toast": {
+
+  }
 }

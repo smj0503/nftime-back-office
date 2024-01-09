@@ -53,7 +53,7 @@ export default function ()
                         <input type="text" name="id" placeholder="ID" required={true}/>
                         <input type="password" name="password" placeholder="Password" required={true}/>
                     </div>
-                    <ActionButton type="submit" width={322}>{ t("signIn.login") }</ActionButton>
+                    <ActionButton type="submit" width="100%">{ t("signIn.login") }</ActionButton>
                 </form>
             </div>
         </div>

@@ -39,7 +39,7 @@
     align-items: center;
     gap: 56px;
 
-    width: 322px;
+    min-width: 322px;
 }
 
 .loginBox > div

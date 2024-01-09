@@ -1,3 +1,4 @@
+import useTranslation from "next-translate/useTranslation";
 import { useRef, useState } from "react";
 
 import styles from "./ImageUploader.module.css";
@@ -5,6 +6,8 @@ import IconPhoto from "../../public/assets/icon-photo.svg";
 
 export default function ({ children, setImage })
 {
+    const { t } = useTranslation("common");
+
     const imageSelector = useRef();
     const [photo, setPhoto] = useState('');
 
@@ -31,7 +34,7 @@ export default function ({ children, setImage })
         <div className={ styles.container }>
             <div className={ styles.header }>
                 <span className={ styles.label }>{ children }</span>
-                <span className={ styles.description }>{ "Click upload Logo, allowed file types: png, jpg, jpeg." }</span>
+                <span className={ styles.description } dangerouslySetInnerHTML={{ __html: t("register.fileTypes") }}/>
             </div>
 
             <div className={ styles.selector }>

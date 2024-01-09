@@ -1,38 +1,38 @@
 {
   "locale": "ko",
   "signIn": {
-    "loginToYourAccount": "Log in to your account",
-    "pleaseEnterYourDetails": "Please enter your details.",
-    "login": "Login"
+    "loginToYourAccount": "발급 받은 계정으로 로그인해주세요",
+    "pleaseEnterYourDetails": "계정 정보를 입력해주세요",
+    "login": "로그인"
   },
   "topBar": {
-    "register": "Register",
-    "dashboards": "Dashboards",
-    "issue": "Issue",
-    "company": "Company",
-    "certificate": "Certificate",
-    "companyList": "Company list",
-    "certificateList": "Certificate list"
+    "register": "등록",
+    "dashboards": "대시보드",
+    "issue": "발행",
+    "company": "발행기관",
+    "certificate": "증명서",
+    "companyList": "발행기관 목록",
+    "certificateList": "증명서 목록"
   },
   "sideBar": {
-    "register": "Register",
-    "company": "Company",
-    "certificate": "Certificate",
-    "issue": "Issue",
-    "dashboards": "Dashboards",
-    "companyList": "Company list",
-    "certificateList": "Certificate list",
-    "logout": "Log out"
+    "register": "등록",
+    "company": "발행기관",
+    "certificate": "증명서",
+    "issue": "발행",
+    "dashboards": "대시보드",
+    "companyList": "발행기관 목록",
+    "certificateList": "증명서 목록",
+    "logout": "로그아웃"
   },
   "register": {
-    "buttonTitle": "Register",
-    "fileTypes": "Click upload Logo, allowed file types: png, jpg, jpeg.",
+    "buttonTitle": "등록",
+    "fileTypes": "클릭해서 로고를 업로드해주세요.<br/>업로드 가능 타입 : png, jpg, jpeg.",
     "company": {
-      "registerCompany": "Register Company",
-      "image": "Company Image",
-      "name": "Company Name",
-      "description": "Company Description",
-      "website": "Company Website"
+      "registerCompany": "발행기관 등록",
+      "image": "발행기관 프로필",
+      "name": "발행기관 이름",
+      "description": "발행기관 설명",
+      "website": "발행기관 웹사이트"
     },
     "certificate": {
       "registerCertificate": "Register Certificate",
