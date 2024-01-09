@@ -1,3 +1,4 @@
+import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { asyncEffect } from "@/common/utils";
@@ -16,6 +17,7 @@ import styles from "../../styles/Register.module.css";
 export default function ()
 {
     /* Local Fields */
+    const { t } = useTranslation("common");
     const router = useRouter();
 
     const [certificateList, setList] = useState([]);
@@ -69,15 +71,15 @@ export default function ()
     };
 
     return (
-        <AppLayout category="Issue" menu="Certificate" >
+        <AppLayout category={ t("topBar.issue") } menu={ t("topBar.certificate") } >
             <form className={ styles.container } onSubmit={ onSubmit }>
-                <span className={ styles.title }>{ "Issue Digital Certificate" }</span>
+                <span className={ styles.title }>{ t("issue.issueDigitalCertificate") }</span>
                 <div className={ styles.formContainer }>
                     <div className={ styles.inputContainer }>
                         <Image image={ image }/>
                         <IssueContainer setCertificate={ setCertificate } setReceiver={ setReceiver } setAddress={ setAddress } setImage={ setImage } certificateList={ certificateList }/>
                     </div>
-                    <ActionButton type="submit" width={185} disabled={ !(!!certificate && !!receiver && !!address) }>{ "Issue" }</ActionButton>
+                    <ActionButton type="submit" width={185} disabled={ !(!!certificate && !!receiver && !!address) }>{ t("issue.buttonTitle") }</ActionButton>
                 </div>
             </form>
             <Toast state={ success } type="issue" message="Your digital certificate has been issued" close={ close } onClick={ onClick } show={ show }/>

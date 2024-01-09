@@ -62,8 +62,9 @@
   },
   "issue": {
     "issueDigitalCertificate": "Issue Digital Certificate",
-    "profile": "Certificate Profile",
+    "profile": "Certificate Image",
     "certificate": "Certificate Name",
+    "chooseCertificate": "Choose Certificate",
     "receiver": "Receiver",
     "walletAddress": "Receiver Wallet Address",
     "buttonTitle": "Issue"

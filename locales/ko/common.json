@@ -52,21 +52,22 @@
     "registeredCompany": "Registered Company",
     "registeredCertificate": "Registered Certificate",
     "issuedCertificate": "Issued Certificate",
-    "companyList": "Company list",
-    "certificateList": "Certificate list",
-    "company": "Company",
-    "certificate": "Certificate",
-    "issue": "Issue",
-    "date": "Date",
+    "companyList": "발행기관 목록",
+    "certificateList": "증명서 목록",
+    "company": "발행기관",
+    "certificate": "증명서 수",
+    "issue": "발행 수",
+    "date": "등록일자",
     "category": "Category"
   },
   "issue": {
-    "issueDigitalCertificate": "Issue Digital Certificate",
-    "profile": "Certificate Profile",
-    "certificate": "Certificate Name",
-    "receiver": "Receiver",
-    "walletAddress": "Receiver Wallet Address",
-    "buttonTitle": "Issue"
+    "issueDigitalCertificate": "디지털 증명서 발행",
+    "profile": "증명서 이미지",
+    "certificate": "증명서",
+    "chooseCertificate": "증명서 선택",
+    "receiver": "받는 사람",
+    "walletAddress": "지갑 주소",
+    "buttonTitle": "발행"
   },
   "toast": {
 
