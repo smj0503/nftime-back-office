@@ -35,17 +35,17 @@
       "website": "발행기관 웹사이트"
     },
     "certificate": {
-      "registerCertificate": "Register Certificate",
-      "image": "Certificate Image",
-      "companyName": "Company Name",
-      "chooseCompany": "Choose Company",
-      "certificateCategory": "Certificate Category",
-      "chooseCertificate": "Choose Certificate",
-      "startDate": "Start Date",
-      "endDate": "End Date",
-      "name": "Certificate Name",
-      "description": "Certificate Description",
-      "website": "Certificate Website"
+      "registerCertificate": "증명서 등록",
+      "image": "증명서 이미지",
+      "companyName": "발행기관",
+      "chooseCompany": "발행기관 선택",
+      "certificateCategory": "증명서 카테고리",
+      "chooseCategory": "카테고리 선택",
+      "startDate": "시작 일자",
+      "endDate": "만료 일자",
+      "name": "증명서 이름",
+      "description": "증명서 설명",
+      "website": "증명서 웹사이트"
     }
   },
   "dashboards": {
