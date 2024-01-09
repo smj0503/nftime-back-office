@@ -1,14 +1,18 @@
+import useTranslation from "next-translate/useTranslation";
+
 import CertificateItem from "@/components/CertificateItem";
 
 import styles from "./CertificateTable.module.css";
 
 export default function ({ certificateList })
 {
+    const { t } = useTranslation("common");
+
     return (
         <div className={ styles.table }>
             <div className={ styles.columns }>
                 <div className={ styles.name }>
-                    <label>{ "Certificate" }</label>
+                    <label>{ t("dashboards.") }</label>
                 </div>
                 <div className={ styles.longData }>
                     <label>{ "Company" }</label>
