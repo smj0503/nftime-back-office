@@ -92,8 +92,8 @@
     "registerCertificate": {
       "success": "등록 성공",
       "failed": "증명서 등록 실패",
-      "successMessage": "Your digital certificate has been issued",
-      "failMessage": "Please try to issue again"
+      "successMessage": "등록한 증명서를 발행도 하시겠어요?",
+      "failMessage": "다시 한 번 등록해보시겠어요?"
     }
   }
 }

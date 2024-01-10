@@ -10,7 +10,7 @@ import AppLayout from "@/components/AppLayout";
 import ImageUploader from "@/components/ImageUploader";
 import CertificateRegisterContainer from "@/components/RegisterContainer/Certificate";
 import ActionButton from "@/components/ActionButton";
-import Toast from "@/components/Toast";
+import Toast from "@/components/Toast/RegisterCertificate";
 
 import styles from "../../styles/Register.module.css";
 
@@ -112,7 +112,7 @@ export default function ()
                     >{ t("register.buttonTitle") }</ActionButton>
                 </div>
             </form>
-            <Toast state={ success } type="register" message="Would you like to issue a certificate as well?" close={ close } onClick={ onClick } show={ show }/>
+            <Toast state={ success } close={ close } onClick={ onClick } show={ show }/>
         </AppLayout>
     )
 }
