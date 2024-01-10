@@ -10,7 +10,7 @@ import AppLayout from "@/components/AppLayout";
 import Image from "@/components/IssueContainer/Image";
 import IssueContainer from "components/IssueContainer/InputContainer";
 import ActionButton from "@/components/ActionButton";
-import Toast from "@/components/Toast";
+import Toast from "@/components/Toast/Issue";
 
 import styles from "../../styles/Register.module.css";
 
@@ -27,7 +27,7 @@ export default function ()
     const [address, setAddress] = useState('');
     const [image, setImage] = useState('');
 
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
     const [success, setSuccess] = useState(false);
 
     /* APIs */
@@ -82,7 +82,7 @@ export default function ()
                     <ActionButton type="submit" width={185} disabled={ !(!!certificate && !!receiver && !!address) }>{ t("issue.buttonTitle") }</ActionButton>
                 </div>
             </form>
-            <Toast state={ success } type="issue" message={ t("toast.issue") } close={ close } onClick={ onClick } show={ show }/>
+            <Toast state={ success } close={ close } onClick={ onClick } show={ show }/>
         </AppLayout>
     )
 }

@@ -5,7 +5,7 @@ import styles from "./Toast.module.css";
 import IconCheck from "../../public/assets/icon-check.svg";
 import IconWarning from "../../public/assets/icon-warning.svg";
 
-export default function ({ state, onClick, close, message, show, type })
+export default function ({ state, onClick, close, successMessage, failMessage, show, type })
 {
     const { t } = useTranslation("common");
 
