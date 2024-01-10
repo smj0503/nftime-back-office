@@ -55,10 +55,13 @@
     "companyList": "Company list",
     "certificateList": "Certificate list",
     "company": "Company",
+    "certificateNum": "Certificate",
     "certificate": "Certificate",
     "issue": "Issue",
     "date": "Date",
-    "category": "Category"
+    "category": "Category",
+    "startDate": "Start date",
+    "endDate": "End date"
   },
   "issue": {
     "issueDigitalCertificate": "Issue Digital Certificate",

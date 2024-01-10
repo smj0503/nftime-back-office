@@ -15,7 +15,7 @@ export default function ({ companyList })
                     <label>{ t("dashboards.company") }</label>
                 </div>
                 <div className={ styles.data }>
-                    <label>{ t("dashboards.certificate") }</label>
+                    <label>{ t("dashboards.certificateNum") }</label>
                 </div>
                 <div className={ styles.data }>
                     <label>{ t("dashboards.issue") }</label>

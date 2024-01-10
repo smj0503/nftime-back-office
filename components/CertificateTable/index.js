@@ -12,22 +12,22 @@ export default function ({ certificateList })
         <div className={ styles.table }>
             <div className={ styles.columns }>
                 <div className={ styles.name }>
-                    <label>{ t("dashboards.") }</label>
+                    <label>{ t("dashboards.certificate") }</label>
                 </div>
                 <div className={ styles.longData }>
-                    <label>{ "Company" }</label>
+                    <label>{ t("dashboards.company") }</label>
                 </div>
                 <div className={ styles.longData }>
-                    <label>{ "Category" }</label>
+                    <label>{ t("dashboards.category") }</label>
                 </div>
                 <div className={ styles.shortData }>
-                    <label>{ "Issue" }</label>
+                    <label>{ t("dashboards.issue") }</label>
                 </div>
                 <div className={ styles.date }>
-                    <label>{ "Start Date" }</label>
+                    <label>{ t("dashboards.startDate") }</label>
                 </div>
                 <div className={ styles.date }>
-                    <label>{ "End Date" }</label>
+                    <label>{ t("dashboards.endDate") }</label>
                 </div>
             </div>
             {

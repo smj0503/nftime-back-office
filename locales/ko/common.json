@@ -41,24 +41,27 @@
       "chooseCompany": "발행기관 선택",
       "certificateCategory": "증명서 카테고리",
       "chooseCategory": "카테고리 선택",
-      "startDate": "시작 일자",
-      "endDate": "만료 일자",
+      "startDate": "등록일자",
+      "endDate": "만료일자",
       "name": "증명서 이름",
       "description": "증명서 설명",
       "website": "증명서 웹사이트"
     }
   },
   "dashboards": {
-    "registeredCompany": "Registered Company",
-    "registeredCertificate": "Registered Certificate",
-    "issuedCertificate": "Issued Certificate",
+    "registeredCompany": "등록된 발행기관",
+    "registeredCertificate": "등록된 증명서",
+    "issuedCertificate": "발행된 증명서",
     "companyList": "발행기관 목록",
     "certificateList": "증명서 목록",
     "company": "발행기관",
-    "certificate": "증명서 수",
+    "certificateNum": "증명서 수",
+    "certificate": "증명서",
     "issue": "발행 수",
     "date": "등록일자",
-    "category": "Category"
+    "category": "카테고리",
+    "startDate": "등록일자",
+    "endDate": "만료일자"
   },
   "issue": {
     "issueDigitalCertificate": "디지털 증명서 발행",
