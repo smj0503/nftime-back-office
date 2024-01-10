@@ -81,13 +81,13 @@
       "success": "Success",
       "failed": "Failed",
       "successMessage": "Your digital certificate has been issued",
-      "failMessage": "Please try to issue again"
+      "failMessage": "Please try to register again"
     },
     "registerCompany": {
       "success": "Success",
       "failed": "Failed",
-      "successMessage": "Your digital certificate has been issued",
-      "failMessage": "Please try to issue again"
+      "successMessage": "Would you like to register a certificate as well?",
+      "failMessage": "Please try to register again"
     },
     "registerCertificate": {
       "success": "Success",

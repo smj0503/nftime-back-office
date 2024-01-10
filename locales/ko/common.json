@@ -74,7 +74,7 @@
   },
   "toast": {
     "cancel": "취소",
-    "yes": "Yes",
+    "yes": "확인",
     "ok": "확인",
     "retry": "재시도",
     "issue": {
@@ -82,6 +82,18 @@
       "failed": "증명서 발행 실패",
       "successMessage": "디지털 증명서가 성공적으 발행됐습니다",
       "failMessage": "다시 한 번 시도해보시겠어요?"
+    },
+    "registerCompany": {
+      "success": "등록 성공",
+      "failed": "발행기관 등록 실패",
+      "successMessage": "디지털 증명서도 등록하러 가시겠어요?",
+      "failMessage": "다시 한 번 등록해보시겠어요?"
+    },
+    "registerCertificate": {
+      "success": "등록 성공",
+      "failed": "증명서 등록 실패",
+      "successMessage": "Your digital certificate has been issued",
+      "failMessage": "Please try to issue again"
     }
   }
 }
