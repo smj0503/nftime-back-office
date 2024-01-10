@@ -27,7 +27,7 @@ export default function ()
     const [address, setAddress] = useState('');
     const [image, setImage] = useState('');
 
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
     const [success, setSuccess] = useState(false);
 
     /* APIs */
@@ -82,7 +82,7 @@ export default function ()
                     <ActionButton type="submit" width={185} disabled={ !(!!certificate && !!receiver && !!address) }>{ t("issue.buttonTitle") }</ActionButton>
                 </div>
             </form>
-            <Toast state={ success } type="issue" message="Your digital certificate has been issued" close={ close } onClick={ onClick } show={ show }/>
+            <Toast state={ success } type="issue" message={ t("toast.issue") } close={ close } onClick={ onClick } show={ show }/>
         </AppLayout>
     )
 }

@@ -1,3 +1,4 @@
+import useTranslation from "next-translate/useTranslation";
 import { useEffect } from "react";
 
 import styles from "./Toast.module.css";
@@ -6,6 +7,8 @@ import IconWarning from "../../public/assets/icon-warning.svg";
 
 export default function ({ state, onClick, close, message, show, type })
 {
+    const { t } = useTranslation("common");
+
     // useEffect(() =>
     // {
     //     if(show)
@@ -27,13 +30,13 @@ export default function ({ state, onClick, close, message, show, type })
                     {
                         state ? (
                             <>
-                                <span className={ styles.state }>{ "Success" }</span>
+                                <span className={ styles.state }>{ t("toast.success") }</span>
                                 <span className={ styles.confirm }>{ message }</span>
                             </>
                         ) : (
                             <>
-                                <span className={ styles.state }>{ "Failed" }</span>
-                                <span className={ styles.confirm }>{ `Please try to ${type} again` }</span>
+                                <span className={ styles.state }>{ t("toast.failed") }</span>
+                                <span className={ styles.confirm }>{ t("toast.tryAgain", { type: type }) }</span>
                             </>
                         )
                     }
@@ -46,15 +49,15 @@ export default function ({ state, onClick, close, message, show, type })
                             type === "register" ? (
                                 <>
                                     <button type="button" className={styles.button } data-color="white" onClick={ close }>
-                                        <label>{ "Cancel" }</label>
+                                        <label>{ t("toast.cancel") }</label>
                                     </button>
                                     <button type="button" className={styles.button } onClick={ onClick }>
-                                        <label>{ "Yes" }</label>
+                                        <label>{ t("toast.yes") }</label>
                                     </button>
                                 </>
                             ) : (
                                 <button type="button" className={styles.button } onClick={ onClick }>
-                                    <label>{ "OK" }</label>
+                                    <label>{ t("toast.ok") }</label>
                                 </button>
                             )
                         }
@@ -62,7 +65,7 @@ export default function ({ state, onClick, close, message, show, type })
                 ) : (
                     <div className={ styles.buttonGroup }>
                         <button type="button" className={styles.button } onClick={ close }>
-                            <label>{ "Retry" }</label>
+                            <label>{ t("toast.retry") }</label>
                         </button>
                     </div>
                 )

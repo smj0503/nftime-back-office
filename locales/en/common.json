@@ -73,6 +73,22 @@
     "buttonTitle": "Issue"
   },
   "toast": {
+    "issue": {
 
+    },
+    "registerCompany": {
+
+    },
+    "registerCertificate": {
+
+    },
+    "success": "Success",
+    "failed": "Failed",
+    "tryAgain": "Please try to {{type}} again",
+    "cancel": "Cancel",
+    "yes": "Yes",
+    "ok": "OK",
+    "retry": "Retry",
+    "issueMessage": "Your digital certificate has been issued"
   }
 }
