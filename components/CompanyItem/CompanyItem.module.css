@@ -37,12 +37,19 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
+
+    width: 372px;
+}
+
+.name, .description
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .description
 {
-    text-overflow: ellipsis;
-    overflow: hidden;
     color: rgba(28, 28, 28, 0.40);
 }
 

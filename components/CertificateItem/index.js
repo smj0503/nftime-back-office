@@ -9,7 +9,7 @@ export default function ({ image, name, description, companyName, category, issu
             <div className={ styles.info }>
                 <RemoteImage src={ image } shape="certificate"/>
                 <div className={ styles.text }>
-                    <span>{ name }</span>
+                    <span className={ styles.name }>{ name }</span>
                     <span className={ styles.description }>{ description }</span>
                 </div>
             </div>
