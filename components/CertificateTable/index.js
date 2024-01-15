@@ -31,7 +31,7 @@ export default function ({ certificateList })
                 </div>
             </div>
             {
-                certificateList.length > 0 && (
+                certificateList && certificateList.length > 0 && (
                     certificateList.map((certificate, index) =>
                     {
                         return (

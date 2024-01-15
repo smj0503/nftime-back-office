@@ -30,9 +30,11 @@ export default function ({ setCertificate, setReceiver, setAddress, setImage, ce
                 <select className={ styles.select } onChange={ onChangeCertificate }>
                     <option value="">{ t("issue.chooseCertificate") }</option>
                     {
-                        certificateList.map((certificate, index) => {
-                            return <option key={ index }>{ certificate.certificate_name }</option>
-                        })
+                        certificateList && certificateList.length > 0 && (
+                            certificateList.map((certificate, index) => {
+                                return <option key={ index }>{ certificate.certificate_name }</option>
+                            })
+                        )
                     }
                 </select>
             </div>

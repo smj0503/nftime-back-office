@@ -25,7 +25,7 @@ export default function ({ companyList })
                 </div>
             </div>
             {
-                companyList.length > 0 && (
+                companyList && companyList.length > 0 && (
                     companyList.map((company, index) =>
                     {
                         return (

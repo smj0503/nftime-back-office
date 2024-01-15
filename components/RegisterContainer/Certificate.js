@@ -49,9 +49,11 @@ export default function ({ setCompany, setCategory, setStartDate, setEndDate, se
                     <select className={ styles.input } onChange={ onChangeCompany }>
                         <option value="">{ t("register.certificate.chooseCompany") }</option>
                         {
-                            companyList.map((company, index) => {
-                                return <option key={ index }>{ company.company_name }</option>
-                            })
+                            companyList && companyList.length > 0 && (
+                                companyList.map((company, index) => {
+                                    return <option key={ index }>{ company.company_name }</option>
+                                })
+                            )
                         }
                     </select>
                 </div>
