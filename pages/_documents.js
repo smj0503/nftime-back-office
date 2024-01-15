@@ -6,9 +6,7 @@ export default class CustomDocument extends Document
         return (
             <Html>
                 <Head>
-                    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
-                    <link rel="preload" as="style" crossOrigin href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css" />
-                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css" />
+                    <link rel="stylesheet" as="style" crossOrigin="true" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css"/>
                 </Head>
                 <body data-theme="light">
                 <Main />
